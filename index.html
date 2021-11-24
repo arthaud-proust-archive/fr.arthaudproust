@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon gavé cv</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body data-menu-open="false">
+        <div class="corner" id="corner-a"></div>
+        <div class="corner" id="corner-b"></div>
+        <div class="corner" id="corner-c"></div>
+        <div class="corner" id="corner-d"></div>
+        
+        <header id="top-text" class="decoration-line horizontal">
+            <div id="logo">
+                <h3>Mon gavé CV</h3>
+            </div>
+            <img id="menu-toggle" src="assets/menu.svg">
+            <nav id="links">
+                <ul>
+                    <li><a data-to="a-propos" href="#a-propos">À propos</a></li>
+                    <li><a data-to="realisations" href="#realisations">Réalisations</a></li>
+                    <li><a data-to="contact" href="#contact">Me contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+ 
+        <div id="right-text" class="decoration-line vertical"></div>
+        <div id="left-text" class="decoration-line vertical"></div>
+        
+        <main id="main" class="main-swiper grabbable grabX">
+            <div class="swiper-wrapper">
+
+                <section class="swiper-slide" id="intro" data-hash="a-propos">
+                    <div>
+                        <h2>À propos</h2>
+                        <p>Mon gavé Curriculum Vitae</p>
+                    </div>
+                    
+                    <div class="section-swiper-1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                
+                                <img class="rounded large" src="https://arthaud.dev/assets/img/me1.jpg" alt="Photo de arthaud de profil"/>
+                                <h1 class="title" data-swiper-parallax-x="-400"><em>Arthaud</em> Proust</h1>
+                                <p data-swiper-parallax-x="-600" class="pt">
+                                    Jeune étudiant curieux, motivé mais fainéant, j'aime concevoir des solutions qui me facilitent la vie, qu'elles soient digitales ou physiques.
+                                </p>   
+                                <p data-swiper-parallax-x="-250"  class="pt pb-3">
+                                    J'aimerais devenir développeur créatif, ou fullstack, et artisan charpentier en parallèle.
+                                </p>
+                                <div data-swiper-parallax-x="-50" class="swipe-indication hidden-sm pt">
+                                    <p>Glissez pour naviguer</p>
+                                    <div class="swipe-animation "></div>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-slide">
+                                <img class="rounded large" src="https://arthaud.dev/assets/img/me1.jpg" alt="Photo de arthaud de profil"/>
+                                <h1 class="title">Arthaud Proust</h1>
+                                <p class="pt">
+                                    Jeune étudiant curieux, motivé mais fainéant, j'aime concevoir des solutions qui me facilitent la vie, qu'elles soient digitales ou physiques.
+                                </p>   
+                                <p class="pt">
+                                    J'aimerais devenir développeur créatif, ou fullstack, et artisan charpentier en parallèle.
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="swipe-indication hidden-xl">
+                        <p>Glissez pour continuer</p>
+                        <div class="swipe-animation"></div>
+                    </div>
+                    <!-- <img id="info-swipe-bottom" class="rounded spin" src="/assets/glisser.svg" alt="Photo de arthaud de profil"/> -->
+
+
+                </section>
+
+                <section class="swiper-slide" data-hash="realisations">
+                    <div></div>
+                    <h2>(frissons garantis)</h2>
+                    <div>
+                        <h2 class="title">Découvrez <br/>mes <em>réalisations</em></h2>
+                    </div>
+                    <ul>
+                        <li><a class="wavy fall" href="https://hub.arthaud.dev">Sur le Hub (toutes)</a></li>
+                        <li><a class="wavy fall" href="https://github.com/arthaud-proust">Sur mon github</a></li>
+                    </ul>
+                </section>
+
+
+                <section class="swiper-slide" data-hash="formation">
+                    <div class="background" data-swiper-parallax-x="-1500" data-swiper-parallax-duration="600"></div>
+                    <h2>Formation</h2>
+                    <ul class="grabbable grabY">
+                        <li>
+                            <article>
+                                <header>
+                                    <h3>BUT MMI</h3>
+                                </header>
+                                <main>
+                                    <time datetime="2021">2021</time> à <time datetime="2024">2024</time>
+                                    <p>IUT Bordeaux Montaigne</p>
+                                </main>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3>Bac général</h3>
+                                </header>
+                                <main>
+                                    <time datetime="2021">2021</time>
+                                    <p>Lycée montesquieu</p>
+                                    <p>Spécialités Maths, Physique, NSI</p>
+                                    <p>Mention très bien</p>
+                                </main>
+                            </article>
+                        </li>  
+                        <li>
+                            <article>
+                                <header>
+                                    <h3>PSC-1 - Premiers secours</h3>
+                                </header>
+                                <main>
+                                    <time datetime="2021">2021</time>
+                                    <p>Talence</p>
+                                </main>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="swiper-slide" data-hash="pourquoi-moi">
+                    <div class="background" data-swiper-parallax-x="-1500" data-swiper-parallax-duration="600"></div>
+                    <div>
+                        <h2 class="title">Pourquoi <em>m'embaucher</em> dans votre startup scalable?</h2>
+                    </div>
+                    <ol class="list-subitems">
+                        <li>Je suis humain</li>
+                        <li class="list-subitem">
+                            <span>Et bon vivant</span>
+                            <p>
+                                Souriant, à l'écoute, taquin mais pas trop.
+                            </p>
+                            <p>Bon, je ne vais pas vous vendre du rêve non plus, on a tous nos défauts.</p>
+                        </li>
+                        <li>Et bon vivant</li>
+                        <li>Je sais cuisiner des tomates farcies</li>
+                        <li>J'aime créer des sites</li>
+                        <li>Je bricole beaucoup</li>
+                        <li>Apprendre est mon objectif premier</li>
+                    </ol>
+                </section>
+
+                <section class="swiper-slide" data-hash="competences">
+                    <div class="background" data-swiper-parallax-x="-1500" data-swiper-parallax-duration="600"></div>
+                    <h2>Domaines de compétences</h2>
+                    <ul class="list-subitems">
+                        <li class="list-subitem">
+                            <span>Développement full-stack</span>
+                            <p>
+                                J'ai acquis des compétences en réalisant des sites, en participant à des projets ou en en créant. 
+                            </p>
+                        </li>
+                        <li class="list-subitem">
+                            <span>Photographie</span>
+                            <p>
+                                Le brouillard et la rue sont mes scènes préférées. Je fais également des photos de portrait.
+                            </p>
+                        </li>
+                        <li>DevOps</li>
+                        <li>Design</li>
+                        <li class="list-subitem">
+                            <span>Travail du bois</span>
+                            <p>
+                                C'est une passion que je nourris à coté des études. Je sculpte divers objets, comme des prises d'escalade ou des repose téléphone.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="swiper-slide" data-hash="competences-informatiques">
+                    <div>
+                        <h2 class="title">Ils sont mes <em>compagnons</em> de travail</h2>
+                        <h2>Je sais pas vous, mais moi je les adore</h2>
+                    </div>
+                    <ul>
+                        <li data-swiper-parallax-x="-100"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain.svg" alt="Image de Laravel"/>Laravel</li>
+                        <li data-swiper-parallax-x="-200"><img  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="Image de ReactJs"/>ReactJs</li>
+                        <li data-swiper-parallax-x="-300"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-plain.svg" alt="Image de nodejs"/>NodeJs</li>
+                        <li data-swiper-parallax-x="-400"><img  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Image de TailwindCss"/>TailwindCss</li>
+                        <li data-swiper-parallax-x="-300"><img  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Image de Figma"/>Figma</li>
+                        <li data-swiper-parallax-x="-200"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/debian/debian-plain.svg" alt="Image de debian"/>Debian</li>
+                        <li data-swiper-parallax-x="-100"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-plain.svg" alt="Image de webpack"/>webpack</li>
+                    </ul>
+                </section>
+
+
+
+                <section class="swiper-slide" data-hash="contact">
+                    <div class="hidden-sm"></div>
+                    <h2>Un projet, une idée, envie de discuter?</h2>
+                    <div>
+                        <!-- <h2 class="title">Et si on <em>travaillait</em> ensemble?</h2> -->
+                        <h2 class="title">Rencontrons nous autour <em>d'un café</em></h2>
+                    </div>
+                    <ul>
+                        <li class="fall">contact@arthaud.dev</li>
+                        <li class="fall">07 83 39 28 88</li>
+                        <li><a class="wavy fall" href="https://www.linkedin.com/in/arthaud-proust/">Ou via linkedin?</a></li>
+                    </ul>
+                </section>
+
+            </div>
+        </main>
+
+        <footer id="bottom-text" class="decoration-line horizontal">
+            <span class="hoverShowHidden">&copy; 2020-2021 Tous droits réservés <span class="hidden italic"> En gros, pas touche!</span></span>
+            <span class="hoverShowHidden"><span class="hidden italic">Je ne mords pas... </span>contact@arthaudproust.fr</span>
+        </footer>
+    </body>
+</html>

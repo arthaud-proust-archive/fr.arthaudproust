@@ -1,0 +1,22 @@
+.italic {
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style:none;
+}
+
+ol {
+    list-style: "\1F449 ";
+}
+
