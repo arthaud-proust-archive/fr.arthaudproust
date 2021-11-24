@@ -79,12 +79,14 @@ body[data-menu-open="true"] {
                     / 1fr;
     }
     body[data-menu-open="true"] {
-        grid-template: "top" 1fr
-        "bottom" calc(2 * var(--col-h))
+        grid-template: "top" calc(100vh - (2 * var(--col-h)))
+                        "bottom" calc(2 * var(--col-h))
+                        "main" 1fr
+
         / 1fr;
     }
     body[data-menu-open="true"] > main {
-        display: none;
+        /* display: none; */
     }
     .corner, .decoration-line.vertical {
         display: none;
@@ -252,17 +254,24 @@ body > main {
     overflow: hidden;
     display: flex;
     flex-flow: row nowrap;
-    scroll-snap-type: x mandatory;
     max-width: 100%;
 }
 
 section {
-    scroll-snap-align: center;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    width: var(--section-w);
 
+
+    /* display: flex; */
+    /* flex-flow: row wrap; */
+}
+.sub {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
     width: var(--section-w);
     height: 100%;
     padding: 0 5vw;
@@ -270,18 +279,16 @@ section {
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
-    /* display: flex; */
-    /* flex-flow: row wrap; */
 }
 
 @media screen and (max-width:576px ){
-    section {
+    .sub {
         padding: 2vh 5vw;
         grid-template-columns: 1fr;
         overflow-y: auto;
     }
 }
-section > * {
+.sub > * {
     /* overflow-y: auto; */
     padding: 5vw 0;
 }
@@ -302,7 +309,7 @@ section .background::after {
     position: absolute;
     top: 0;
     left: 0%;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background: #fafafa;
 }
@@ -345,7 +352,8 @@ section:nth-child(2n+1) {
 }
 
 #main ul.list-subitems li,
-#main ol.list-subitems li {
+#main ol.list-subitems li,
+.lessMore {
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -354,34 +362,51 @@ section:nth-child(2n+1) {
 }
 
 #main ul.list-subitems li.list-subitem > span,
-#main ol.list-subitems li.list-subitem > span {
+#main ol.list-subitems li.list-subitem > span,
+.lessMore > span {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: baseline;
+    align-items: baseline;
 }
 
 
 #main ul.list-subitems li.list-subitem > span::after, 
-#main ol.list-subitems li.list-subitem > span::after {
+#main ol.list-subitems li.list-subitem > span::after,
+.lessMore > span::after {
     content: url(/assets/more.svg);
     height: 25px;
-    width: 20px;
+    width: 25px;
     margin-left: 10px;
+    transition: .2s;
+}
+
+#main ul.list-subitems li.list-subitem:hover > span::after, 
+#main ol.list-subitems li.list-subitem:hover > span::after,
+.lessMore:hover > span::after {
+    transform: rotate(-10deg) scale(1.5);
+}
+#main ul.list-subitems li.list-subitem:active > span::after, 
+#main ol.list-subitems li.list-subitem:active > span::after,
+.lessMore:active > span::after {
+    transform: rotate(-10deg) scale(0);
 }
 
 #main ul.list-subitems li.list-subitem[data-open="true"] > span::after,
-#main ol.list-subitems li.list-subitem[data-open="true"] > span::after {
+#main ol.list-subitems li.list-subitem[data-open="true"] > span::after,
+.lessMore[data-open="true"] > span::after  {
     content: url(/assets/less.svg);
 }
 
 
-#main ul.list-subitems li.list-subitem p,
-#main ol.list-subitems li.list-subitem p {
+#main ul.list-subitems li.list-subitem > p,
+#main ol.list-subitems li.list-subitem > p,
+.lessMore > p  {
     height: 0;
     transition: .2s;
 }
 #main ul.list-subitems li.list-subitem[data-open="true"] p,
-#main ol.list-subitems li.list-subitem[data-open="true"] p {
+#main ol.list-subitems li.list-subitem[data-open="true"] p,
+.lessMore[data-open="true"] > p {
     height: auto;
 }

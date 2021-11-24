@@ -1,6 +1,9 @@
 .italic {
     font-style: italic;
 }
+.strike {
+    text-decoration: line-through;
+}
 
 * {
     margin: 0;

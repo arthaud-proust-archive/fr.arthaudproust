@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        hashNavigation: true,
+        // hashNavigation: true,
         // centeredSlidesBounds: true,
         grabCursor: true,
         // resistance: false,
@@ -66,11 +66,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('menu-toggle').addEventListener('click', toggleMenu)
 
-    document.querySelectorAll('.list-subitem').forEach(el=>{
+    document.querySelectorAll('.list-subitem, .lessMore').forEach(el=>{
         el.addEventListener('click', function() {
             const keepClosed = el.dataset.open==="true";
-            document.querySelectorAll('.list-subitem').forEach(el=>{
-                // el.dataset.open = false;
+            document.querySelectorAll('.list-subitem, .lessMore').forEach(el=>{
+                el.dataset.open = false;
             })
 
             el.dataset.open = keepClosed?"false":"true";
