@@ -12,7 +12,8 @@
 
 .swipe-indication {
     margin-top: 1rem;
-    padding: 1rem 0 15rem 0;
+    margin-bottom: 3rem;
+    padding: 1rem 0 0 0;
 }
 .swipe-indication p {
     font-size: 1.2rem;
