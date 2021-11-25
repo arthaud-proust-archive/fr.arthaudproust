@@ -61,7 +61,7 @@ section {
     margin-bottom: 3rem;
     transition: .2s;
 }
-.title:active, .grabbing .title {
+.title:active {
     transform: scale(0.8) rotate(-5deg);
 }
 
