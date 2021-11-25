@@ -31,7 +31,10 @@ window.addEventListener('DOMContentLoaded', function() {
         // centeredSlidesBounds: true,
         grabCursor: true,
         // resistance: false,
-        resistanceRatio: 0.8,
+        shortSwipes: true,
+        resistanceRatio: 1.2,
+        longSwipesRatio: 0.1,
+        threshold: 10,
         // And if we need scrollbar
         scrollbar: {
             el: '.swiper-scrollbar',

@@ -402,7 +402,7 @@ section:nth-child(2n+1) {
 #main ul.list-subitems li.list-subitem[data-open="true"] > span::after,
 #main ol.list-subitems li.list-subitem[data-open="true"] > span::after,
 .lessMore[data-open="true"] > span::after  {
-    content: url(/assets/less.svg);
+    background: url(/assets/less.svg);
 }
 
 
