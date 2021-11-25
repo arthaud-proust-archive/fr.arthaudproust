@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.fullReload": true,
+		"liveServer.settings.useLocalIp": true,
+		"liveServer.settings.root": "/public/"
+	}
+}

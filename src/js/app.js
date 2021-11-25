@@ -38,6 +38,14 @@ window.addEventListener('DOMContentLoaded', function() {
         },
     });
 
+    mainSwiper.on('sliderMove', function () {
+        mainSwiper.el.classList.add('grabbing');
+    });
+
+    mainSwiper.on('touchEnd', function () {
+        mainSwiper.el.classList.remove('grabbing');
+    });
+
 
     // const sectionSwiper = new Swiper('.section-swiper-1', {
     //     // Optional parameters
@@ -76,4 +84,6 @@ window.addEventListener('DOMContentLoaded', function() {
             el.dataset.open = keepClosed?"false":"true";
         })
     })
+
+
 });

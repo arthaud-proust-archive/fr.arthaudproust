@@ -45,6 +45,12 @@
     position: relative;
 } */
 
+section {
+    transition: transform 0.2s;
+}
+.grabbing section {
+    transform: scale(0.9) !important;
+}
 
 .title {
     position: relative;
@@ -52,6 +58,10 @@
     /* font-family: 'Abril Fatface', cursive; */
     font-size: var(--font-h1);
     margin-bottom: 3rem;
+    transition: .2s;
+}
+.title:active {
+    transform: scale(0.8) rotate(-5deg);
 }
 
 em {
