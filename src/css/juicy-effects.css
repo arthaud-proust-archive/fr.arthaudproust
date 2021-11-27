@@ -96,21 +96,19 @@ em:hover::after {
 
 
 .wavy {
+    position: relative;
     padding: 1rem 0;
     text-decoration: underline;
-    -webkit-text-decoration-color: darkturquoise !important;
-    text-decoration-color: darkturquoise !important;
-    -webkit-text-decoration-style: wavy;
-    text-decoration-style: wavy;
+    text-decoration-color: #d8ad7d9d !important;
+    text-decoration-style: dashed;
     transition: .3s;
     transform-origin: left;
     transition-timing-function: cubic-bezier(.62,.04,.08,2.65);
+    text-decoration-thickness: 0.4rem;
 
 }
 .wavy:hover {
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    -webkit-text-decoration-color: salmon !important;
+    text-decoration-style: dashed;
     text-decoration-color: salmon !important;
 }
 
