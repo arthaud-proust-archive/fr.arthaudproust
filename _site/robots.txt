@@ -1,0 +1,3 @@
+Sitemap: https://arthaudproust.fr/sitemap.xml
+User-agent: *
+Disallow:
