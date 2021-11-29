@@ -55,7 +55,9 @@ exclude:
   - workspace.code-workspace
 
 collections:
-  - realisations
+  realisations:
+    output: true
+    permalink: /:collection/:name/
 
 sass:
   style: compact # possible values: nested expanded compact compressed

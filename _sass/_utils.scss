@@ -4,12 +4,12 @@
     }
 
     .hidden-xl {
-        display: none;
+        display: none !important;
     }
 }
 @media screen and (max-width:576px ){
     .hidden-sm {
-        display: none;
+        display: none !important;
     }
     .hidden-xl {
         display: initial;

@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
+    const sections = Array.from(document.querySelectorAll('#main > div > section'));
     const sectionSwiper = new Swiper('.section-swiper', {
         // Optional parameters
         direction: 'vertical',
@@ -55,6 +56,13 @@ window.addEventListener('DOMContentLoaded', function() {
         },
     });
 
+    function slideToHash(to) {
+        if(to==="") return;    
+        mainSwiper.slideTo(sections.indexOf(document.querySelector(`section[data-hash="${to}"]`)));
+    }
+
+    slideToHash(window.location.hash.replace('#',''));
+
     mainSwiper.on('sliderMove', function () {
         mainSwiper.el.classList.add('grabbing');
     });
@@ -66,10 +74,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
     sectionSwiper.on("slideChange", function(e) {
         // e.activeIndex
-        // const section = e.el.closest('section');
-        // const card = e.el.querySelectorAll('.swiper-slide')[e.activeIndex].querySelector('.realisation-card.with-bg');
-        // const img = card.dataset.img;
-        // card.style = `background-image: url(${img});${card.getAttribute('style')}`
+        const section = e.el.closest('section');
+        const imageCover = document.getElementById('section-image-cover');
+        const card = e.el.querySelectorAll('.swiper-slide')[e.activeIndex+1];
+        const img = card.dataset.cover;
+        if(!img) return;
+        imageCover.src = img;
     })
 
 
@@ -83,11 +93,12 @@ window.addEventListener('DOMContentLoaded', function() {
         document.getElementById('menu-toggle').src= `assets/${closed?'close':'menu'}.svg`;
     }
 
-    const sections = Array.from(document.querySelectorAll('#main > div > section'));
     document.getElementById('links').querySelectorAll('a').forEach(link=>link.addEventListener('click', function() {
         setMenu(false)
-        mainSwiper.slideTo(sections.indexOf(document.querySelector(`section[data-hash="${link.dataset.to}"]`)));
+        slideToHash(link.dataset.to)
     }));
+
+
 
 
     document.getElementById('menu-toggle').addEventListener('click', toggleMenu)
