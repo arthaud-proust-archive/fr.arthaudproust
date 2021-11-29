@@ -73,12 +73,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/styles.css?v=1-0-1">
 
         <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
 
         <script src="/js/swiper-bundle.min.js"></script>
-        <script src="/js/app.js"></script>
+        <script src="/js/app.js?v=1-0-1"></script>
     </head>
     <body data-menu-open="false">
         <div class="corner" id="corner-a"></div>
@@ -105,6 +105,9 @@
         <main id="main" class="main-swiper grabbable grabX">
     <div class="swiper-wrapper">
 
+        
+
+        
         <section class="swiper-slide" id="intro" data-hash="a-propos">
     <div class="sub">
         <div>
@@ -119,7 +122,7 @@
                     <img class="rounded large" src="https://arthaudproust.fr/assets/img/me-x256.jpg" alt="Photo de arthaud de profil"/>
                     <h1 class="title" data-swiper-parallax-x="-400"><em>Arthaud</em> Proust</h1>
                     <p data-swiper-parallax-x="-600" class="pt">
-                        Jeune étudiant curieux, motivé mais fainéant, j'aime concevoir des solutions qui me facilitent la vie, qu'elles soient digitales ou physiques.
+                        Jeune étudiant curieux et motivé, j'aime concevoir des solutions qui me facilitent la vie, qu'elles soient digitales ou physiques.
                     </p>   
                     <p data-swiper-parallax-x="-250"  class="pt pb-3">
                         J'aimerais devenir développeur créatif, ou fullstack, et artisan charpentier en parallèle.
@@ -141,62 +144,124 @@
         
 <section class="swiper-slide" data-hash="realisations">
     <div class="sub">
-
-        <div></div>
-        <h2 class="hoverShowHidden">(frissons garantis) <span class="hidden">si si je vous assure</span></h2>
         <div>
             <h2 class="title">Découvrez <br/>mes <em>réalisations</em></h2>
+            <h3>Des sites, des photos, des projets</h3>
         </div>
-        <ul>
-            <li><a class="wavy fall" href="https://hub.arthaud.dev">Sur le Hub (toutes)</a></li>
-            <li><a class="wavy fall" href="https://github.com/arthaud-proust">Sur mon github</a></li>
-        </ul>
-    </div>  
-</section>
+        <div class="section-swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a class="realisation-card with-bg" data-img="/assets/realisations/test.png" href="https://escalade-montesquieu.fr">
+    <h2>Escalade Montesquieu</h2>
+    <p>Site de la section escalade du lycée Montesquieu à Bordeaux.</p>
+    <img src="/assets/realisations/escalade-montesquieu.jpg" alt="Image représentant Escalade Montesquieu"/>
+</a>
+                </li>
+                <li class="swiper-slide">
+                    <a class="realisation-card with-bg" data-img="/assets/realisations/test.png" href="https://preview.arthaud.dev">
+    <h2>Preview</h2>
+    <p>Visualisez, comparez, organisez, partagez vos photos depuis n'importe quel appareil.</p>
+    <img src="/assets/realisations/preview.jpg" alt="Image représentant Preview"/>
+</a>
+                </li>
+                <li class="swiper-slide">
+                    <a class="realisation-card with-bg" data-img="/assets/realisations/test.png" href="https://bordeaux-photo.fr">
+    <h2>Bordeaux Photo</h2>
+    <p>Des jeunes Bordelais et Bordelaises qui organisent des concours photo aux thèmes variés.</p>
+    <img src="/assets/realisations/bdx-photo.jpg" alt="Image représentant Bordeaux Photo"/>
+</a>
+                </li>
+                <li class="swiper-slide">
+                    <ul class="card">
+                        <li><h2>Explorez-les autrement</h2></li>
+                        <li><a class="pencil-link" href="https://hub.arthaud.dev">
+    <span class="pencil-link-text">Sur le hub (toutes)</span>
+    
         
-<section class="swiper-slide" data-hash="formation">
-    <div class="background" data-swiper-parallax-x="-1500" data-swiper-parallax-duration="600"></div>
-    <div class="sub">
+    <!-- <svg class="pencil-link-svg" viewBox="0 0 379 173" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M87.9203 145.504H313.921C456.328 145.504 336.134 10.4314 185.354 16.0424C12.8779 22.4606 -92.808 215.47 252.642 162.479C475.714 128.261 351.896 -22.9844 144.858 4.35287C-32.2013 27.7318 -39.9559 141.821 87.9203 145.504Z"/>
+    </svg> -->
+<!-- 
+    <svg class="pencil-link-svg" preserveAspectRatio="none" width="317" height="214" viewBox="0 0 317 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M51.9204 181.976H288.072C342.353 184.17 300.134 12.7959 149.354 19.8237C-23.1218 27.8626 -97.1316 263.522 216.642 203.237C395.546 168.865 315.896 -29.0577 108.859 5.1825C-68.201 34.4648 17.0973 181.976 51.9204 181.976Z"/>
+    </svg> -->
+    
 
-        <h2>Formation</h2>
-        <ul class="grabbable grabY">
-            <li>
-                <article>
-                    <header>
-                        <h3>BUT MMI</h3>
-                    </header>
-                    <main>
-                        <time datetime="2021">2021</time> à <time datetime="2024">2024</time>
-                        <p>IUT Bordeaux Montaigne</p>
-                    </main>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <header>
-                        <h3>Bac général</h3>
-                    </header>
-                    <main>
-                        <time datetime="2021">2021</time>
-                        <p>Lycée Montesquieu Bordeaux</p>
-                        <p>Spécialités Maths, Physique, NSI</p>
-                        <p>Mention très bien</p>
-                    </main>
-                </article>
-            </li>  
-            <li>
-                <article>
-                    <header>
-                        <h3>PSC-1 - Premiers secours</h3>
-                    </header>
-                    <main>
-                        <time datetime="2021">2021</time>
-                        <p>Talence</p>
-                    </main>
-                </article>
-            </li>
-        </ul>
-    </div>
+    <!-- <svg class="pencil-link-svg" preserveAspectRatio="none" width="320" height="204" viewBox="0 0 320 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M53.9205 175.976H290.072C359.862 175.976 302.134 6.79593 151.354 13.8237C-21.1217 21.8626 -80.8486 242.79 218.642 197.237C383.329 172.188 306.933 -40.0885 104.827 8.00289C-38.1993 42.0362 -10.628 175.976 53.9205 175.976Z"/>
+    </svg> -->
+
+<!-- <svg class="pencil-link-svg" preserveAspectRatio="none" width="320" height="204" viewBox="0 0 320 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M53.9204 175.976H290.072C359.862 175.976 301.971 3.89071 151.354 13.8237C4.45007 23.5118 -80.8487 242.79 218.642 197.237C383.329 172.188 306.933 -40.0885 104.827 8.00289C-38.1993 42.0362 -10.628 175.976 53.9204 175.976Z"/>
+</svg> -->
+<svg class="pencil-link-svg" preserveAspectRatio="none"  width="313" height="205" viewBox="0 0 313 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.9204 175.976H282.072C351.862 175.976 295.263 19.61 144.646 29.543C-2.25787 39.2311 -88.8487 242.79 210.642 197.237C375.329 172.188 298.933 -40.0885 96.8269 8.00289C-23.4261 36.6173 -18.628 175.976 45.9204 175.976Z" stroke="white"/>
+</svg>
+
+
+
+        
+        
+        
+</a>
+
+<!-- <svg class="pencil-link-svg" width="379" height="159" viewBox="0 0 379 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M87.9203 134.144H313.921C456.328 134.144 336.134 9.69488 185.354 14.8645C12.8779 20.7779 -92.808 198.606 252.642 149.784C475.714 118.257 351.896 -21.0926 144.858 4.09444C-32.2013 25.6345 -39.9559 130.75 87.9203 134.144Z"/>
+</svg> -->
+
+    <!-- <svg class="pencil-link-svg" width="352" height="103" viewBox="0 0 352 103" xmlns="http://www.w3.org/2000/svg">
+        <path fill="none" d="M46 91H272C413 86 313.032 9.33809 163 6.00002C-9.4649 2.16282 -41.5116 86.5386 54.6282 99.1138C141.438 111.283 415.254 76.8029 336.963 36.6433C258.672 -3.51632 78.1561 -15.6859 48.9491 28.9359C25.5835 64.6334 37.2473 81.4003 46 85.3217"/>
+    </svg> -->
+    <!-- <svg class="pencil-link-svg"  width="408" height="102" viewBox="0 0 408 102"  xmlns="http://www.w3.org/2000/svg">
+        <path d="M88.9206 85.7149H314.921C455.92 80.7149 355.952 4.05303 205.92 0.714956C33.4555 -3.12224 -132.344 123.742 211.989 97.893C591.773 69.3826 323.397 13.9031 188.872 13.9031C13.0502 13.9031 -77.7375 75.5471 88.9206 85.7149Z" />
+    </svg> --></li>
+                        <li><a class="pencil-link" href="https://github.com/arthaud-proust">
+    <span class="pencil-link-text">Sur github</span>
+    
+        
+    <!-- <svg class="pencil-link-svg" viewBox="0 0 379 173" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M87.9203 145.504H313.921C456.328 145.504 336.134 10.4314 185.354 16.0424C12.8779 22.4606 -92.808 215.47 252.642 162.479C475.714 128.261 351.896 -22.9844 144.858 4.35287C-32.2013 27.7318 -39.9559 141.821 87.9203 145.504Z"/>
+    </svg> -->
+<!-- 
+    <svg class="pencil-link-svg" preserveAspectRatio="none" width="317" height="214" viewBox="0 0 317 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M51.9204 181.976H288.072C342.353 184.17 300.134 12.7959 149.354 19.8237C-23.1218 27.8626 -97.1316 263.522 216.642 203.237C395.546 168.865 315.896 -29.0577 108.859 5.1825C-68.201 34.4648 17.0973 181.976 51.9204 181.976Z"/>
+    </svg> -->
+    
+
+    <!-- <svg class="pencil-link-svg" preserveAspectRatio="none" width="320" height="204" viewBox="0 0 320 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M53.9205 175.976H290.072C359.862 175.976 302.134 6.79593 151.354 13.8237C-21.1217 21.8626 -80.8486 242.79 218.642 197.237C383.329 172.188 306.933 -40.0885 104.827 8.00289C-38.1993 42.0362 -10.628 175.976 53.9205 175.976Z"/>
+    </svg> -->
+
+<!-- <svg class="pencil-link-svg" preserveAspectRatio="none" width="320" height="204" viewBox="0 0 320 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M53.9204 175.976H290.072C359.862 175.976 301.971 3.89071 151.354 13.8237C4.45007 23.5118 -80.8487 242.79 218.642 197.237C383.329 172.188 306.933 -40.0885 104.827 8.00289C-38.1993 42.0362 -10.628 175.976 53.9204 175.976Z"/>
+</svg> -->
+<svg class="pencil-link-svg" preserveAspectRatio="none"  width="313" height="205" viewBox="0 0 313 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.9204 175.976H282.072C351.862 175.976 295.263 19.61 144.646 29.543C-2.25787 39.2311 -88.8487 242.79 210.642 197.237C375.329 172.188 298.933 -40.0885 96.8269 8.00289C-23.4261 36.6173 -18.628 175.976 45.9204 175.976Z" stroke="white"/>
+</svg>
+
+
+
+        
+        
+        
+</a>
+
+<!-- <svg class="pencil-link-svg" width="379" height="159" viewBox="0 0 379 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M87.9203 134.144H313.921C456.328 134.144 336.134 9.69488 185.354 14.8645C12.8779 20.7779 -92.808 198.606 252.642 149.784C475.714 118.257 351.896 -21.0926 144.858 4.09444C-32.2013 25.6345 -39.9559 130.75 87.9203 134.144Z"/>
+</svg> -->
+
+    <!-- <svg class="pencil-link-svg" width="352" height="103" viewBox="0 0 352 103" xmlns="http://www.w3.org/2000/svg">
+        <path fill="none" d="M46 91H272C413 86 313.032 9.33809 163 6.00002C-9.4649 2.16282 -41.5116 86.5386 54.6282 99.1138C141.438 111.283 415.254 76.8029 336.963 36.6433C258.672 -3.51632 78.1561 -15.6859 48.9491 28.9359C25.5835 64.6334 37.2473 81.4003 46 85.3217"/>
+    </svg> -->
+    <!-- <svg class="pencil-link-svg"  width="408" height="102" viewBox="0 0 408 102"  xmlns="http://www.w3.org/2000/svg">
+        <path d="M88.9206 85.7149H314.921C455.92 80.7149 355.952 4.05303 205.92 0.714956C33.4555 -3.12224 -132.344 123.742 211.989 97.893C591.773 69.3826 323.397 13.9031 188.872 13.9031C13.0502 13.9031 -77.7375 75.5471 88.9206 85.7149Z" />
+    </svg> --></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- <h2 class="hoverShowHidden">(frissons garantis) <span class="hidden">si si je vous assure</span></h2> -->
+    </div>  
 </section>
         
 <section class="swiper-slide" data-hash="pourquoi-moi">
@@ -206,15 +271,15 @@
             <h2 class="title">Pourquoi <em>travailler</em> avec moi?</h2>
         </div>
         <ol class="list-subitems">
-            <li>Je suis humain,</li>
-            <li>Bon vivant et très ponctuel</li>
+            <li>Je suis humain</li>
+            <li>Respectueux et à l'écoute</li>
             <li class="list-subitem">
                 <span>Je sais cuisiner des tomates farcies</span>
                 <p>
                     La recette transmise de génération en génération !
                 </p>
             </li>
-            <li>Je bricole beaucoup</li>
+            <li>Je suis débrouillard</li>
             <li>Apprendre est mon objectif premier</li>
         </ol>
     </div>
@@ -235,7 +300,47 @@
             <li class="list-subitem">
                 <span>Photographie</span>
                 <p>
-                    Je photographie des manifestations, des lieux abandonnés, des gens, le brouillard et la rue depuis 2018. Venez voir mes photo sur <a class="wavy" href="https://500px.com/p/arthaud">mon profil 500px</a>! 
+                    Je photographie des manifestations, des lieux abandonnés, des gens, le brouillard et la rue depuis 2018. Venez voir mes photo sur <a class="pencil-link" href="https://500px.com/p/arthaud">
+    <span class="pencil-link-text">mon profil 500px</span>
+    
+        
+    <!-- <svg class="pencil-link-svg" viewBox="0 0 379 173" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M87.9203 145.504H313.921C456.328 145.504 336.134 10.4314 185.354 16.0424C12.8779 22.4606 -92.808 215.47 252.642 162.479C475.714 128.261 351.896 -22.9844 144.858 4.35287C-32.2013 27.7318 -39.9559 141.821 87.9203 145.504Z"/>
+    </svg> -->
+<!-- 
+    <svg class="pencil-link-svg" preserveAspectRatio="none" width="317" height="214" viewBox="0 0 317 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M51.9204 181.976H288.072C342.353 184.17 300.134 12.7959 149.354 19.8237C-23.1218 27.8626 -97.1316 263.522 216.642 203.237C395.546 168.865 315.896 -29.0577 108.859 5.1825C-68.201 34.4648 17.0973 181.976 51.9204 181.976Z"/>
+    </svg> -->
+    
+
+    <!-- <svg class="pencil-link-svg" preserveAspectRatio="none" width="320" height="204" viewBox="0 0 320 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M53.9205 175.976H290.072C359.862 175.976 302.134 6.79593 151.354 13.8237C-21.1217 21.8626 -80.8486 242.79 218.642 197.237C383.329 172.188 306.933 -40.0885 104.827 8.00289C-38.1993 42.0362 -10.628 175.976 53.9205 175.976Z"/>
+    </svg> -->
+
+<!-- <svg class="pencil-link-svg" preserveAspectRatio="none" width="320" height="204" viewBox="0 0 320 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M53.9204 175.976H290.072C359.862 175.976 301.971 3.89071 151.354 13.8237C4.45007 23.5118 -80.8487 242.79 218.642 197.237C383.329 172.188 306.933 -40.0885 104.827 8.00289C-38.1993 42.0362 -10.628 175.976 53.9204 175.976Z"/>
+</svg> -->
+<svg class="pencil-link-svg" preserveAspectRatio="none"  width="313" height="205" viewBox="0 0 313 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.9204 175.976H282.072C351.862 175.976 295.263 19.61 144.646 29.543C-2.25787 39.2311 -88.8487 242.79 210.642 197.237C375.329 172.188 298.933 -40.0885 96.8269 8.00289C-23.4261 36.6173 -18.628 175.976 45.9204 175.976Z" stroke="white"/>
+</svg>
+
+
+
+        
+        
+        
+</a>
+
+<!-- <svg class="pencil-link-svg" width="379" height="159" viewBox="0 0 379 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M87.9203 134.144H313.921C456.328 134.144 336.134 9.69488 185.354 14.8645C12.8779 20.7779 -92.808 198.606 252.642 149.784C475.714 118.257 351.896 -21.0926 144.858 4.09444C-32.2013 25.6345 -39.9559 130.75 87.9203 134.144Z"/>
+</svg> -->
+
+    <!-- <svg class="pencil-link-svg" width="352" height="103" viewBox="0 0 352 103" xmlns="http://www.w3.org/2000/svg">
+        <path fill="none" d="M46 91H272C413 86 313.032 9.33809 163 6.00002C-9.4649 2.16282 -41.5116 86.5386 54.6282 99.1138C141.438 111.283 415.254 76.8029 336.963 36.6433C258.672 -3.51632 78.1561 -15.6859 48.9491 28.9359C25.5835 64.6334 37.2473 81.4003 46 85.3217"/>
+    </svg> -->
+    <!-- <svg class="pencil-link-svg"  width="408" height="102" viewBox="0 0 408 102"  xmlns="http://www.w3.org/2000/svg">
+        <path d="M88.9206 85.7149H314.921C455.92 80.7149 355.952 4.05303 205.92 0.714956C33.4555 -3.12224 -132.344 123.742 211.989 97.893C591.773 69.3826 323.397 13.9031 188.872 13.9031C13.0502 13.9031 -77.7375 75.5471 88.9206 85.7149Z" />
+    </svg> -->! 
                 </p>
             </li>
             <li>DevOps</li>
@@ -243,7 +348,7 @@
             <li class="list-subitem">
                 <span>Travail du bois</span>
                 <p>
-                    C'est une passion que je nourris à coté des études. Je sculpte divers objets, comme des prises d'escalade ou des reposes-téléphone.
+                    C'est une passion que je nourris à coté des études. Je sculpte divers objets, comme des prises d'escalade ou des repose-téléphone.
                 </p>
             </li>
         </ul>
@@ -277,7 +382,47 @@
         <ul>
             <li class="fall">contact@arthaudproust.fr</li>
             <li class="fall">07 83 39 28 88</li>
-            <li><a class="wavy fall" href="https://www.linkedin.com/in/arthaud-proust/">Ou via linkedin?</a></li>
+            <li><a class="pencil-link" href="https://www.linkedin.com/in/arthaud-proust/">
+    <span class="pencil-link-text">Ou via linkedin?</span>
+    
+        
+    <!-- <svg class="pencil-link-svg" viewBox="0 0 379 173" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M87.9203 145.504H313.921C456.328 145.504 336.134 10.4314 185.354 16.0424C12.8779 22.4606 -92.808 215.47 252.642 162.479C475.714 128.261 351.896 -22.9844 144.858 4.35287C-32.2013 27.7318 -39.9559 141.821 87.9203 145.504Z"/>
+    </svg> -->
+<!-- 
+    <svg class="pencil-link-svg" preserveAspectRatio="none" width="317" height="214" viewBox="0 0 317 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M51.9204 181.976H288.072C342.353 184.17 300.134 12.7959 149.354 19.8237C-23.1218 27.8626 -97.1316 263.522 216.642 203.237C395.546 168.865 315.896 -29.0577 108.859 5.1825C-68.201 34.4648 17.0973 181.976 51.9204 181.976Z"/>
+    </svg> -->
+    
+
+    <!-- <svg class="pencil-link-svg" preserveAspectRatio="none" width="320" height="204" viewBox="0 0 320 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M53.9205 175.976H290.072C359.862 175.976 302.134 6.79593 151.354 13.8237C-21.1217 21.8626 -80.8486 242.79 218.642 197.237C383.329 172.188 306.933 -40.0885 104.827 8.00289C-38.1993 42.0362 -10.628 175.976 53.9205 175.976Z"/>
+    </svg> -->
+
+<!-- <svg class="pencil-link-svg" preserveAspectRatio="none" width="320" height="204" viewBox="0 0 320 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M53.9204 175.976H290.072C359.862 175.976 301.971 3.89071 151.354 13.8237C4.45007 23.5118 -80.8487 242.79 218.642 197.237C383.329 172.188 306.933 -40.0885 104.827 8.00289C-38.1993 42.0362 -10.628 175.976 53.9204 175.976Z"/>
+</svg> -->
+<svg class="pencil-link-svg" preserveAspectRatio="none"  width="313" height="205" viewBox="0 0 313 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.9204 175.976H282.072C351.862 175.976 295.263 19.61 144.646 29.543C-2.25787 39.2311 -88.8487 242.79 210.642 197.237C375.329 172.188 298.933 -40.0885 96.8269 8.00289C-23.4261 36.6173 -18.628 175.976 45.9204 175.976Z" stroke="white"/>
+</svg>
+
+
+
+        
+        
+        
+</a>
+
+<!-- <svg class="pencil-link-svg" width="379" height="159" viewBox="0 0 379 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M87.9203 134.144H313.921C456.328 134.144 336.134 9.69488 185.354 14.8645C12.8779 20.7779 -92.808 198.606 252.642 149.784C475.714 118.257 351.896 -21.0926 144.858 4.09444C-32.2013 25.6345 -39.9559 130.75 87.9203 134.144Z"/>
+</svg> -->
+
+    <!-- <svg class="pencil-link-svg" width="352" height="103" viewBox="0 0 352 103" xmlns="http://www.w3.org/2000/svg">
+        <path fill="none" d="M46 91H272C413 86 313.032 9.33809 163 6.00002C-9.4649 2.16282 -41.5116 86.5386 54.6282 99.1138C141.438 111.283 415.254 76.8029 336.963 36.6433C258.672 -3.51632 78.1561 -15.6859 48.9491 28.9359C25.5835 64.6334 37.2473 81.4003 46 85.3217"/>
+    </svg> -->
+    <!-- <svg class="pencil-link-svg"  width="408" height="102" viewBox="0 0 408 102"  xmlns="http://www.w3.org/2000/svg">
+        <path d="M88.9206 85.7149H314.921C455.92 80.7149 355.952 4.05303 205.92 0.714956C33.4555 -3.12224 -132.344 123.742 211.989 97.893C591.773 69.3826 323.397 13.9031 188.872 13.9031C13.0502 13.9031 -77.7375 75.5471 88.9206 85.7149Z" />
+    </svg> --></li>
         </ul>
     </div>
 </section>

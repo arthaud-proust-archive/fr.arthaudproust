@@ -7,6 +7,6 @@
 	"settings": {
 		"liveServer.settings.fullReload": true,
 		"liveServer.settings.useLocalIp": true,
-		"liveServer.settings.root": "/public/"
+		"liveServer.settings.root": "/_site"
 	}
 }

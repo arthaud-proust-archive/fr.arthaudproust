@@ -1,11 +1,25 @@
 window.addEventListener('DOMContentLoaded', function() {
-
+    const sectionSwiper = new Swiper('.section-swiper', {
+        // Optional parameters
+        direction: 'vertical',
+        grabCursor: true,
+        loop: false,
+        freeMode: false,
+        // autoHeight: true,
+        // resistance: false,
+        mousewheel: {
+            forceToAxis: true,
+            eventsTarget: '.section-swiper'
+        },
+        resistanceRatio: 0.9,
+    });
     const mainSwiper = new Swiper('.main-swiper', {
         // Optional parameters
         direction: 'horizontal',
         loop: false,
         mousewheel: {
-            eventsTarget: 'container'
+            forceToAxis: true,
+            eventsTarget: '.main-swiper'
         },
         parallax: true,
         // freeMode: {
@@ -50,13 +64,14 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // const sectionSwiper = new Swiper('.section-swiper-1', {
-    //     // Optional parameters
-    //     direction: 'vertical',
-    //     loop: false,
-    //     // resistance: false,
-    //     resistanceRatio: 0.9,
-    // });
+    sectionSwiper.on("slideChange", function(e) {
+        // e.activeIndex
+        // const section = e.el.closest('section');
+        // const card = e.el.querySelectorAll('.swiper-slide')[e.activeIndex].querySelector('.realisation-card.with-bg');
+        // const img = card.dataset.img;
+        // card.style = `background-image: url(${img});${card.getAttribute('style')}`
+    })
+
 
     function toggleMenu() {
         const open = document.body.dataset.menuOpen==="true";
@@ -78,7 +93,10 @@ window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('menu-toggle').addEventListener('click', toggleMenu)
 
     document.querySelectorAll('.list-subitem, .lessMore').forEach(el=>{
-        el.addEventListener('click', function() {
+        el.addEventListener('click', function(e) {
+            if(e.target.tagName=="A" || e.target.parentElement.tagName=="A") {
+                return;
+            }
             const keepClosed = el.dataset.open==="true";
             document.querySelectorAll('.list-subitem, .lessMore').forEach(el=>{
                 el.dataset.open = false;

@@ -1,15 +1,48 @@
 
 <section class="swiper-slide" data-hash="realisations">
     <div class="sub">
-
-        <div></div>
-        <h2 class="hoverShowHidden">(frissons garantis) <span class="hidden">si si je vous assure</span></h2>
         <div>
             <h2 class="title">Découvrez <br/>mes <em>réalisations</em></h2>
+            <h3>Des sites, des photos, des projets</h3>
         </div>
-        <ul>
-            <li><a class="wavy fall" href="https://hub.arthaud.dev">Sur le Hub (toutes)</a></li>
-            <li><a class="wavy fall" href="https://github.com/arthaud-proust">Sur mon github</a></li>
-        </ul>
+        <div class="section-swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    {% 
+                        include components/realisation-card.html 
+                        title="Escalade Montesquieu"
+                        desc="Site de la section escalade du lycée Montesquieu à Bordeaux."
+                        img="/assets/realisations/escalade-montesquieu.jpg"
+                        link="https://escalade-montesquieu.fr"
+                    %}
+                </li>
+                <li class="swiper-slide">
+                    {% 
+                        include components/realisation-card.html 
+                        title="Preview"
+                        desc="Visualisez, comparez, organisez, partagez vos photos depuis n'importe quel appareil."
+                        img="/assets/realisations/preview.jpg"
+                        link="https://preview.arthaud.dev"
+                    %}
+                </li>
+                <li class="swiper-slide">
+                    {% 
+                        include components/realisation-card.html 
+                        title="Bordeaux Photo"
+                        desc="Des jeunes Bordelais et Bordelaises qui organisent des concours photo aux thèmes variés."
+                        img="/assets/realisations/bdx-photo.jpg"
+                        link="https://bordeaux-photo.fr"
+                    %}
+                </li>
+                <li class="swiper-slide">
+                    <ul class="card">
+                        <li><h2>Explorez-les autrement</h2></li>
+                        <li>{% include components/link.html href="https://hub.arthaud.dev" content="Sur le hub (toutes)" %}</li>
+                        <li>{% include components/link.html href="https://github.com/arthaud-proust" content="Sur github" %}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- <h2 class="hoverShowHidden">(frissons garantis) <span class="hidden">si si je vous assure</span></h2> -->
     </div>  
 </section>

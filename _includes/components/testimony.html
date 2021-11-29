@@ -1,0 +1,16 @@
+<div class="testimony">
+    <div class="identity">
+        {% if include.img %}
+        <img class="medium rounded" src="{{ include.img }}" alt=" "/>
+        {% endif %}
+        <div>
+            <span class="identity-title">{{ include.title }}</span>
+            {% if include.subtitle %}
+            <span class="identity-subtitle">{{ include.subtitle }}</span>
+            {% endif %}
+        </div>
+    </div>
+    {% if include.content %}
+    <p class="content">{{ include.content }}</p>        
+    {% endif %}
+</div>
