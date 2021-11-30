@@ -76,6 +76,7 @@ window.addEventListener('DOMContentLoaded', function() {
         // e.activeIndex
         const section = e.el.closest('section');
         const imageCover = document.getElementById('section-image-cover');
+        if(!imageCover) return;
         const card = e.el.querySelectorAll('.swiper-slide')[e.activeIndex+1];
         const img = card.dataset.cover;
         if(!img) return;

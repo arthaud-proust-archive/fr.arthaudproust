@@ -40,7 +40,7 @@ github: https://github.com/arthaud-proust/fr.escalade-montesquieu
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/preview.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/home.jpg">
     <div class="intro-card">
         <span>Août 2020</span>
         <h2>Intégration du site</h2>
@@ -59,7 +59,7 @@ github: https://github.com/arthaud-proust/fr.escalade-montesquieu
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/salle3d.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/salle3d-2.jpg">
     <div class="intro-card">
         <span>Depuis Octobre 2020</span>
         <h2>Évolution du site</h2>
