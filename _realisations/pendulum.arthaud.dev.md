@@ -1,15 +1,15 @@
 ---
 layout: realisation
-title: Bordeaux Photo
-desc: Des jeunes Bordelais et Bordelaises qui organisent des concours photo aux thèmes variés.
-img: /assets/realisations/bordeaux-photo.fr/preview.jpg
+title: Simulation de pendule
+desc: Adaptation du calcul sur une animation modulable.
+img: /assets/realisations/pendulum
 link: https://bordeaux-photo.fr
-github: https://github.com/arthaud-proust/fr.bordeaux-photo
-display: true
+github: https://github.com/arthaud-proust/dev.arthaud.pendulum
+display: false
 ---
 
 {% capture content %}
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/preview.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/preview.jpg">
     <div class="intro-card">
         <span>Mars 2021</span>
         <h2>Aux origines</h2>
@@ -22,7 +22,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/preview.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/preview.jpg">
     <div class="intro-card">
         <h2>La création du projet</h2>
         <p>
@@ -30,7 +30,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/preview.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/preview.jpg">
     <div class="intro-card">
         <h2>Les débuts</h2>
         <p>
@@ -38,7 +38,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/site.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/site.jpg">
     <div class="intro-card">
         <span>Avril 2021</span>
         <h2>Création du site</h2>
@@ -48,7 +48,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/premier-concours.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/premier-concours.jpg">
     <div class="intro-card">
         <span>Avril 2021</span>
         <h2>Premier concours</h2>
@@ -57,7 +57,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/site.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/site.jpg">
     <div class="intro-card">
         <span>Avril à novembre 2021</span>
         <h2>Évolution du projet</h2>
@@ -66,7 +66,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/pause.jpg">
+<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/pause.jpg">
     <div class="intro-card">
         <span>Depuis novembre 2021</span>
         <h2>Nous sommes en pause</h2>

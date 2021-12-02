@@ -14,15 +14,17 @@
                     </div>
                 </li>
                 {% for realisation in site.realisations %}
-                <li class="swiper-slide">
-                    {% 
-                        include components/realisation-card.html 
-                        title=realisation.title
-                        desc=realisation.desc
-                        img=realisation.img
-                        link=realisation.url
-                    %}
-                </li>
+                    {% if realisation.display %}
+                        <li class="swiper-slide">
+                            {% 
+                                include components/realisation-card.html 
+                                title=realisation.title
+                                desc=realisation.desc
+                                img=realisation.img
+                                link=realisation.url
+                            %}
+                        </li>
+                    {% endif %}
                 {% endfor %}
 
                 <li class="swiper-slide">

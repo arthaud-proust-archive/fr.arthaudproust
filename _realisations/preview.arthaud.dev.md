@@ -4,6 +4,7 @@ title: Preview
 desc: Visualisez, comparez, organisez, partagez vos photos depuis n'importe quel appareil.
 img: /assets/realisations/preview.arthaud.dev/preview.jpg
 link: https://preview.arthaud.dev
+display: true
 ---
 
 {% capture content %}

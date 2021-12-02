@@ -5,6 +5,7 @@ desc: Site de la section escalade du lycée Montesquieu à Bordeaux.
 img: /assets/realisations/escalade-montesquieu.fr/preview.jpg
 link: https://escalade-montesquieu.fr
 github: https://github.com/arthaud-proust/fr.escalade-montesquieu
+display: true
 ---
 
 {% capture content %}
