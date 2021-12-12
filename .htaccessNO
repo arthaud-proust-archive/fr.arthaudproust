@@ -1,3 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # 1 month = 
 # 2592000
 
@@ -15,15 +18,15 @@
     Header set Access-Control-Allow-Origin "*"
     
     <FilesMatch "\\.(ico|jpe?g|png|gif|swf|svg)$">
-        Header set Cache-Control "max-age=2592000, public"
+        Header set Cache-Control "max-age=2592000, public, must-revalidate"
     </FilesMatch>
 
     <FilesMatch "\\.(css)$">
-        Header set Cache-Control "max-age=216000, public"
+        Header set Cache-Control "max-age=216000, public, must-revalidate"
     </FilesMatch>
 
     <FilesMatch "\\.(js)$">
-        Header set Cache-Control "max-age=216000, private"
+        Header set Cache-Control "max-age=216000, private, must-revalidate"
     </FilesMatch>
 
     <FilesMatch "\\.(x?html?|php)$">
