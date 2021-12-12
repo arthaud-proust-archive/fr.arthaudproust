@@ -11,6 +11,11 @@
         </div>
     </div>
     {% if include.content %}
-    <p class="content">{{ include.content }}</p>        
+    <p class="content lessMore">
+        <span>
+            {{ include.content }}
+        </span>
+        <!-- <span class="more">{{ include.more }}</span> -->
+    </p>        
     {% endif %}
 </div>

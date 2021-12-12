@@ -1,0 +1,65 @@
+
+<meta name="robots" content="all">
+<meta name="target" content="all">
+<meta name="author" content="{{ site.seo.author }}">
+<meta name="owner" content="{{ site.seo.author }}">
+<meta name="language" content="fr">
+
+<meta http-equiv="content-language" content="fr" />
+<meta name="url" content="{{ site.seo.url }}">
+<meta name="identifier-URL" content="{{ site.seo.url }}">
+<link rel="canonical" href="{{ site.seo.url }}" />
+
+<title>{{ site.title }}</title>
+<meta name="subject" content="informatic">
+<meta name="description" content="{{ site.seo.desc }}" />
+<meta name="keywords" content="arthaud proust, bordeaux, developpeur, informatique">
+<meta name="theme-color" content="#000">
+
+<meta property="og:title" content="{{ site.seo.title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{ site.seo.desc }}" />
+<meta property="og:site_name" content="{{ site.seo.author }}" />
+<meta property="og:url" content="{{ site.seo.url }}" />
+<meta property="og:locale" content="fr" />
+<meta property="og:image" content="{{ site.seo.url }}/assets/img/hero.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="{{ site.seo.url }}">
+<meta name="twitter:title" content="{{ site.title }}" />
+<meta name="twitter:description" content="{{ site.seo.desc }}" />
+<meta name="twitter:site" content="{{ site.seo.url }}" />
+<meta name="twitter:image" content="{{ site.seo.url }}/assets/img/hero.png" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+<!-- Apple meta -->
+<link rel="apple-touch-icon" href="{{ site.seo.url }}/assets/img/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="{{ site.seo.url }}/assets/img/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.seo.url }}/assets/img/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="{{ site.seo.url }}/assets/img/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.seo.url }}/assets/img/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="{{ site.seo.url }}/assets/img/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="{{ site.seo.url }}/assets/img/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="{{ site.seo.url }}/assets/img/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.seo.url }}/assets/img/apple-touch-icon-180x180.png" />
+
+<link rel="icon" href="{{ site.seo.url }}/assets/img/favicon.ico">
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "{{ site.seo.author }}",
+        "url": "{{ site.seo.url }}",
+        "address": "Bordeaux",
+        "sameAs": [
+            {% assign length = site.seo.links.size | minus: 1 -%}
+            {% for i in (0..length) -%}
+            "{{ site.seo.links[i] }}"{% if length>i -%},{% endif %}
+            {% endfor -%}
+        ]
+    }
+</script>
