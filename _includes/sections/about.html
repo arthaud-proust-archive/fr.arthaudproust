@@ -2,7 +2,7 @@
     <div class="sub">
         <div>
             <h2>À propos</h2>
-            <span class="italic">Mon curriculum vitae</span>
+            <!-- <span class="italic">Qui suis-je?</span> -->
         </div>
         
         <div class="section-swiper-1">
@@ -12,22 +12,20 @@
                     <img class="rounded large" src="https://arthaudproust.fr/assets/img/me-x256.jpg" alt="Photo de arthaud de profil"/>
                     <h1 class="title" data-swiper-parallax-x="-400"><em>Arthaud</em> Proust</h1>
                     <p data-swiper-parallax-x="-600" class="pt">
-                        Jeune étudiant curieux et créatif, j'aime concevoir des solutions qui me facilitent la vie, qu'elles soient digitales ou physiques.
+                        <b>Développeur web passionné et créatif</b>, je conçois des solutions digitales, design et développe des sites.
                     </p>   
                     <p data-swiper-parallax-x="-250"  class="pt pb-3">
-                        J'aimerais devenir développeur fullstack ou créatif, et artisan charpentier en parallèle.
+                        <!-- Ouvert aux commandes, je propose <a class="underline" href="#">différents services</a>  -->
+                        J'ai commencé à développer des sites dès 14 ans, tout d'abord pour explorer le domaine du web, puis pour apporter des solutions ou créer des projets. 
                     </p>
-                    <div data-swiper-parallax-x="-50" class="swipe-indication hidden-smd pt pb-3">
-                        <p class="italic">Cliquez et glissez pour naviguer</p>
-                        <div class="swipe-animation "></div>
-                    </div>
+                    {% include components/swipe-indic.html %}
                 </div>
             </div>
         </div>
-        <div class="swipe-indication hidden">
+        <!-- <div class="swipe-indication hidden">
             <p>Cliquer et glisser pour naviguer</p>
             <div class="swipe-animation"></div>
-        </div>
+        </div> -->
         <!-- <img id="info-swipe-bottom" class="rounded spin" src="assets/glisser.svg" alt="Photo de arthaud de profil"/> -->
     </div>
 </section>

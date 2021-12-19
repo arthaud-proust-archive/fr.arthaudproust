@@ -5,7 +5,7 @@ desc: "Projet BUT MMI Bordeaux: refonte ergonomique et graphique d'un site."
 img: /assets/realisations/bordeaux-photo.fr/preview.jpg
 link: https://capc.netlify.app
 github: https://github.com/studio-beauvoir/jekyll-capc
-display: true
+display: false
 ---
 
 {% capture content %}

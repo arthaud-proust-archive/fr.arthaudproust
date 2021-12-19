@@ -1,4 +1,16 @@
-
+@keyframes wiggle{
+    0% { transform: rotate(0); }
+    10% { transform: rotate(-50deg); }
+    20% { transform: rotate(40deg); }
+    30% { transform: rotate(-30deg); }
+    40% { transform: rotate(20deg); }
+    50% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    70% { transform: rotate(-5deg); }
+    80% { transform: rotate(5deg); }
+    90% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
 @keyframes band {
     from {
         transform: translate(0);

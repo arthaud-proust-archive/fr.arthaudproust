@@ -40,7 +40,7 @@ body {
     display: grid;
     height: 100vh;
     overflow: hidden;
-    background: white;
+    background: #fafafa;
     gap: 1px;
     grid-template: "a top b" var(--col-h)
                 "left main right" 1fr
@@ -131,6 +131,47 @@ p {
     display: flex;
     overflow: hidden;
 
+    .pageArrow {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color .2s;
+        &.hidden {
+            display: none;
+        }
+
+        &:hover {
+            background-color: #fafafa;
+            &::after {
+                animation: wiggle 1s;
+            }
+        }
+
+        &::after {
+            $size: 2.5rem;
+            content: ' ';
+            object-fit: fill;
+            height: $size;
+            width: $size;
+            transform-origin: center center;
+            mix-blend-mode: difference;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        &.left::after {
+            background-image: url('/assets/left-arrow.svg');
+        }
+
+        &.right::after {
+            background-image: url('/assets/right-arrow.svg');
+        }
+    }
+
     &.horizontal {
         padding: 0 1.5rem;
         justify-content: flex-start;
@@ -139,7 +180,7 @@ p {
     }
 
     &.vertical {
-        padding: 1.5rem 0;
+        // padding: 1.5rem 0;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
@@ -210,6 +251,23 @@ body[data-menu-open="true"] #top-text {
         align-items: center !important;
         align-content: center !important;
     }
+
+    body > header ul li a::after, body > footer ul li a::after {
+        content: ' ';
+        position: absolute;
+        height: 200%;
+        width: 99%;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        background: white;
+        mix-blend-mode: difference;
+        transition: opacity .3s;
+        transform: translate(-50%, -50%) rotate(13deg);
+    }
+    body > header ul li a:hover::after, body > footer ul li a:hover::after {
+        opacity: 1;
+    }
 }
 body > header ul, body > footer ul {
     display: flex;
@@ -220,22 +278,7 @@ body > header ul li a, body > footer ul li a {
     cursor: pointer;
     padding: 1rem 1.6rem;
 }
-body > header ul li a::after, body > footer ul li a::after {
-    content: ' ';
-    position: absolute;
-    height: 200%;
-    width: 99%;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    background: white;
-    mix-blend-mode: difference;
-    transition: opacity .3s;
-    transform: translate(-50%, -50%) rotate(13deg);
-}
-body > header ul li a:hover::after, body > footer ul li a:hover::after {
-    opacity: 1;
-}
+
 
 
 #bottom-text {grid-area: bottom}
@@ -375,9 +418,9 @@ section *:not(img) {
             img {
                 position: relative;
                 align-self: flex-end;
-                /* position: absolute; */
+                // position: absolute;
                 flex: 1 1;
-                /* object-fit: contain; */
+                object-fit: contain;
                 max-width: 100%;
                 width: auto;
                 margin-top: 2rem;
@@ -538,4 +581,9 @@ section:nth-child(2n+1) {
 #main ol.list-subitems li.list-subitem[data-open="true"] p,
 .lessMore[data-open="true"] > p {
     height: auto;
+}
+
+
+.noMixBlend * {
+    mix-blend-mode: normal !important;
 }

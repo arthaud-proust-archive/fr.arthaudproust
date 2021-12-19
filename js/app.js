@@ -1,6 +1,11 @@
 window.addEventListener('DOMContentLoaded', function() {
     const sections = Array.from(document.querySelectorAll('#main > div > section'));
-    const sectionSwiper = new Swiper('.section-swiper', {
+    const sectionEl = document.querySelector('.section-swiper');
+    const pageArrows = {
+        left: document.querySelector('.pageArrow.left'),
+        right: document.querySelector('.pageArrow.right')
+    };
+    const sectionSwiper = new Swiper(sectionEl, {
         // Optional parameters
         direction: 'vertical',
         grabCursor: true,
@@ -10,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
         // resistance: false,
         mousewheel: {
             forceToAxis: true,
-            eventsTarget: '.section-swiper'
+            eventsTarget: sectionEl.closest('.swiper-slide')
         },
         resistanceRatio: 0.9,
     });
@@ -55,6 +60,7 @@ window.addEventListener('DOMContentLoaded', function() {
             el: '.swiper-scrollbar',
         },
     });
+    refreshPageArrows();
 
     function slideToHash(to) {
         if(to==="") return;    
@@ -71,17 +77,34 @@ window.addEventListener('DOMContentLoaded', function() {
         mainSwiper.el.classList.remove('grabbing');
     });
 
+    mainSwiper.on("slideChange", refreshPageArrows);
+
+    pageArrows.left.addEventListener('click', function() {
+        mainSwiper.slidePrev(1500);
+    });
+    pageArrows.right.addEventListener('click', function() {
+        mainSwiper.slideNext(1500);
+    });
+
+
 
     sectionSwiper.on("slideChange", function(e) {
         // e.activeIndex
-        const section = e.el.closest('section');
-        const imageCover = document.getElementById('section-image-cover');
-        if(!imageCover) return;
-        const card = e.el.querySelectorAll('.swiper-slide')[e.activeIndex+1];
-        const img = card.dataset.cover;
-        if(!img) return;
-        imageCover.src = img;
+        try {
+            const section = e.el.closest('section');
+            const imageCover = document.getElementById('section-image-cover');
+            if(!imageCover) return;
+            const card = e.el.querySelectorAll('.swiper-slide')[e.activeIndex+1];
+            const img = card.dataset.cover;
+            if(!img) return;
+            imageCover.src = img;
+        } catch(e) {}
     })
+
+    function refreshPageArrows() {
+        pageArrows.left.classList.toggle('hidden', mainSwiper.isBeginning);
+        pageArrows.right.classList.toggle('hidden', mainSwiper.isEnd || (mainSwiper.isBeginning && mainSwiper.slides.length===0));
+    }
 
 
     function toggleMenu() {

@@ -1,8 +1,8 @@
 <section class="swiper-slide" data-hash="realisations">
-    <div class="sub">
+    <div class="sub noMixBlend">
         
         <div class="img-wrapper">
-            <img class="hidden-sm full" id="section-image-cover" src="{{ include.img }}">
+            <img class="hidden-smd full" id="section-image-cover" src="{{ include.img }}">
         </div>
 
         <div class="section-swiper">
@@ -23,9 +23,12 @@
                 </li>
                 {{ content }}
                 <li class="swiper-slide">
-                    <ul class="card">
-                        <li><h2>Explorez cette réalisation</h2></li>
+                    <ul class="card" style="padding: 0;">
+                        <li><h2>Et ensuite?</h2></li>
+                        {% if include.link %}
                         <li>{% include components/link.html href=include.link content="En action" %}</li>
+                        {% endif %}
+                        
                         {% if include.github %}
                         <li>{% include components/link.html href=include.github content="Sur github" %}</li>
                         {% endif %}

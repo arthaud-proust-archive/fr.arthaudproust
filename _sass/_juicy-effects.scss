@@ -12,6 +12,7 @@
     }
 }
 
+
 .pencil-link {
     padding: 1rem 0;
     position: relative;
@@ -45,7 +46,29 @@
     }
 }
 
+.underline {
+    display: inline-block;
+    position: relative;
+    &::after {
+        transition: .2s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        content:' ';
+        width: 100%;
+        height: 0.3rem;
+        background: #d8ad7d9d;
+        mix-blend-mode:overlay;
+    }
+    &:hover::after {
+        border-radius: 1px;
+        top: -5%;
+        left: -1.5%;
+        width: 103%;
+        height: 110%;
+    }
 
+}
 .swipe-indication {
     margin-top: 1rem;
     margin-bottom: 3rem;
@@ -99,7 +122,7 @@ section {
         transform: scale(0.8) rotate(-5deg);
     }
 }
-em {
+em, .link {
     position: relative;
     font-style: normal;
 
@@ -121,6 +144,13 @@ em {
         transition: 7s;
         width: 100%;
     }
+
+    &.link::after {
+        left: -2.5%;
+        top:-2.5%;
+        width: 105%;
+        height: 105%;
+    }
 }
 
 @media screen and (max-width:576px ){
@@ -136,11 +166,10 @@ em {
     padding: 1rem 0;
     text-decoration: underline;
     text-decoration-color: #d8ad7d9d !important;
-    text-decoration-style: dashed;
+    text-decoration-style: wavy;
     transition: .3s;
     transform-origin: left;
     transition-timing-function: cubic-bezier(.62,.04,.08,2.65);
-    text-decoration-thickness: 0.4rem;
 
     &:hover {
         text-decoration-style: dashed;
@@ -150,6 +179,7 @@ em {
 
 
 .fall {
+    display: inline-block;
     transition: .3s;
     transform-origin: left;
     transition-timing-function: cubic-bezier(.62,.04,.08,2.65);
@@ -242,8 +272,23 @@ img {
 }
 
 .img-wrapper {
+    z-index: 100;
     height: 100%;
     padding: 0 !important;
+    position: relative;
+
+    @media screen and (max-width:576px ){
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: black;
+            content: ' ';
+            z-index: -1;
+        }
+    }
 }
 
 .spin {

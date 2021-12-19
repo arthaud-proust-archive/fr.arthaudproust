@@ -87,9 +87,12 @@
         <div class="corner" id="corner-d"></div>
  
         {% include header.html %}
-        <div id="right-text" class="decoration-line vertical"></div>
-        <div id="left-text" class="decoration-line vertical"></div>
-
+        <div id="left-text" class="decoration-line vertical">
+            {% include components/pageArrow.html dir="left" %}
+        </div>
+        <div id="right-text" class="decoration-line vertical">
+            {% include components/pageArrow.html dir="right" %}
+        </div>
         
         <main id="main" class="">
             <div class="swiper-wrapper">

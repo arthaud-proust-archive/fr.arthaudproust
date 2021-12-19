@@ -19,13 +19,13 @@
 
 <title>Développeur à Bordeaux - Arthaud Proust</title>
 <meta name="subject" content="informatic">
-<meta name="description" content="Étudiant en développement web à Bordeaux, je suis passionné depuis l&#039;enfance par la création - Arthaud Proust" />
+<meta name="description" content="Développeur web passionné et créatif, je conçois des solutions digitales, design et développe des sites. - Arthaud Proust" />
 <meta name="keywords" content="arthaud proust, bordeaux, developpeur, informatique">
 <meta name="theme-color" content="#000">
 
 <meta property="og:title" content="Développeur à Bordeaux" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="Étudiant en développement web à Bordeaux, je suis passionné depuis l&#039;enfance par la création - Arthaud Proust" />
+<meta property="og:description" content="Développeur web passionné et créatif, je conçois des solutions digitales, design et développe des sites. - Arthaud Proust" />
 <meta property="og:site_name" content="Arthaud Proust" />
 <meta property="og:url" content="https://arthaudproust.fr" />
 <meta property="og:locale" content="fr" />
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://arthaudproust.fr">
 <meta name="twitter:title" content="Développeur à Bordeaux - Arthaud Proust" />
-<meta name="twitter:description" content="Étudiant en développement web à Bordeaux, je suis passionné depuis l&#039;enfance par la création - Arthaud Proust" />
+<meta name="twitter:description" content="Développeur web passionné et créatif, je conçois des solutions digitales, design et développe des sites. - Arthaud Proust" />
 <meta name="twitter:site" content="https://arthaudproust.fr" />
 <meta name="twitter:image" content="https://arthaudproust.fr/assets/img/hero.png" />
 
@@ -91,19 +91,23 @@
  
         <header id="top-text" class="decoration-line horizontal">
     <div id="logo">
-        <h3>Arthaud Proust</h3>
+        <h3><a href="/">Arthaud Proust</a></h3>
     </div>
     <img id="menu-toggle" src="/assets/menu.svg" alt="menu">
     <nav id="links">
         <ul>
-            <li><a data-to="a-propos" href="/#a-propos">À propos</a></li>
             <li><a data-to="realisations" href="/#realisations">Réalisations</a></li>
+            <li><a data-to="a-propos" href="/#a-propos">À propos</a></li>
             <li><a data-to="contact" href="/#contact">Me contacter</a></li>
         </ul>
     </nav>
 </header>
-        <div id="right-text" class="decoration-line vertical"></div>
-        <div id="left-text" class="decoration-line vertical"></div>
+        <div id="left-text" class="decoration-line vertical">
+            <div class="pageArrow left"></div>
+        </div>
+        <div id="right-text" class="decoration-line vertical">
+            <div class="pageArrow right"></div>
+        </div>
 
         <main id="main" class="main-swiper grabbable grabX">
     <div class="swiper-wrapper">
@@ -111,39 +115,6 @@
         
         
         
-        <section class="swiper-slide" id="intro" data-hash="a-propos">
-    <div class="sub">
-        <div>
-            <h2>À propos</h2>
-            <span class="italic">Mon curriculum vitae</span>
-        </div>
-        
-        <div class="section-swiper-1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    
-                    <img class="rounded large" src="https://arthaudproust.fr/assets/img/me-x256.jpg" alt="Photo de arthaud de profil"/>
-                    <h1 class="title" data-swiper-parallax-x="-400"><em>Arthaud</em> Proust</h1>
-                    <p data-swiper-parallax-x="-600" class="pt">
-                        Jeune étudiant curieux et créatif, j'aime concevoir des solutions qui me facilitent la vie, qu'elles soient digitales ou physiques.
-                    </p>   
-                    <p data-swiper-parallax-x="-250"  class="pt pb-3">
-                        J'aimerais devenir développeur fullstack ou créatif, et artisan charpentier en parallèle.
-                    </p>
-                    <div data-swiper-parallax-x="-50" class="swipe-indication hidden-smd pt pb-3">
-                        <p class="italic">Cliquez et glissez pour naviguer</p>
-                        <div class="swipe-animation "></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swipe-indication hidden">
-            <p>Cliquer et glisser pour naviguer</p>
-            <div class="swipe-animation"></div>
-        </div>
-        <!-- <img id="info-swipe-bottom" class="rounded spin" src="assets/glisser.svg" alt="Photo de arthaud de profil"/> -->
-    </div>
-</section>
         
 <section class="swiper-slide" data-hash="realisations">
     <div class="sub">
@@ -171,14 +142,6 @@
                     
                 
                     
-                        <li class="swiper-slide">
-                            <a class="realisation-card with-bg" data-img="/assets/realisations/test.png" href="/realisations/capc-netlify-app/">
-    <h2>Site du CAPC Bordeaux</h2>
-    <p>Projet BUT MMI Bordeaux: refonte ergonomique et graphique d'un site.</p>
-    <img src="/assets/realisations/bordeaux-photo.fr/preview.jpg" alt="Image représentant Site du CAPC Bordeaux"/>
-</a>
-                        </li>
-                    
                 
                     
                         <li class="swiper-slide">
@@ -194,6 +157,16 @@
                 
                     
                         <li class="swiper-slide">
+                            <a class="realisation-card with-bg" data-img="/assets/realisations/test.png" href="/realisations/porte-telephone/">
+    <h2>Porte-téléphone en bois</h2>
+    <p>Découpe dans un bloc de hêtre</p>
+    <img src="/assets/realisations/porte-telephone/3.jpg" alt="Image représentant Porte-téléphone en bois"/>
+</a>
+                        </li>
+                    
+                
+                    
+                        <li class="swiper-slide">
                             <a class="realisation-card with-bg" data-img="/assets/realisations/test.png" href="/realisations/preview-arthaud-dev/">
     <h2>Preview</h2>
     <p>Visualisez, comparez, organisez, partagez vos photos depuis n'importe quel appareil.</p>
@@ -204,7 +177,7 @@
                 
 
                 <li class="swiper-slide">
-                    <ul class="card">
+                    <ul class="card" style="padding: 0;">
                         <li><h2>Explorez-les autrement</h2></li>
                         <li><a class="pencil-link" href="https://hub.arthaud.dev">
     <span class="pencil-link-text">Sur le hub (toutes)</span>
@@ -218,12 +191,51 @@
         <path d="M45.9204 175.976H282.072C351.862 175.976 295.263 19.61 144.646 29.543C-2.25787 39.2311 -88.8487 242.79 210.642 197.237C375.329 172.188 298.933 -40.0885 96.8269 8.00289C-23.4261 36.6173 -18.628 175.976 45.9204 175.976Z" stroke="white"/>
     </svg>
 </a></li>
+                        <li><div data-swiper-parallax-x="-50" class="swipe-indication pt pb-3">
+    <p class="italic">Cliquez et glissez pour naviguer</p>
+    <div class="swipe-animation "></div>
+</div></li>
                     </ul>
                 </li>
+
             </ul>
         </div>
         <!-- <h2 class="hoverShowHidden">(frissons garantis) <span class="hidden">si si je vous assure</span></h2> -->
     </div>  
+</section>
+        <section class="swiper-slide" id="intro" data-hash="a-propos">
+    <div class="sub">
+        <div>
+            <h2>À propos</h2>
+            <!-- <span class="italic">Qui suis-je?</span> -->
+        </div>
+        
+        <div class="section-swiper-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    
+                    <img class="rounded large" src="https://arthaudproust.fr/assets/img/me-x256.jpg" alt="Photo de arthaud de profil"/>
+                    <h1 class="title" data-swiper-parallax-x="-400"><em>Arthaud</em> Proust</h1>
+                    <p data-swiper-parallax-x="-600" class="pt">
+                        <b>Développeur web passionné et créatif</b>, je conçois des solutions digitales, design et développe des sites.
+                    </p>   
+                    <p data-swiper-parallax-x="-250"  class="pt pb-3">
+                        <!-- Ouvert aux commandes, je propose <a class="underline" href="#">différents services</a>  -->
+                        J'ai commencé à développer des sites dès 14 ans, tout d'abord pour explorer le domaine du web, puis pour apporter des solutions ou créer des projets. 
+                    </p>
+                    <div data-swiper-parallax-x="-50" class="swipe-indication pt pb-3">
+    <p class="italic">Cliquez et glissez pour naviguer</p>
+    <div class="swipe-animation "></div>
+</div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="swipe-indication hidden">
+            <p>Cliquer et glisser pour naviguer</p>
+            <div class="swipe-animation"></div>
+        </div> -->
+        <!-- <img id="info-swipe-bottom" class="rounded spin" src="assets/glisser.svg" alt="Photo de arthaud de profil"/> -->
+    </div>
 </section>
         
 <section class="swiper-slide" data-hash="pourquoi-moi">
@@ -233,7 +245,14 @@
             <h2 class="title">Pourquoi <em>travailler</em> avec moi?</h2>
         </div>
         <ol class="list-subitems">
-            <li>Je suis humain</li>
+            <li></li>
+            <li class="list-subitem">
+                <span>Jeune et expérimenté</span>
+                <p>
+                    En ce qui concerne la gestion de projet, le dialogue entre client et développeur, la construction d'un site... <br/>
+                    Évidemment, il me reste beaucoup à apprendre :)
+                </p>
+            </li>
             <li>Respectueux et à l'écoute</li>
             <li class="list-subitem">
                 <span>Je sais cuisiner des tomates farcies</span>
@@ -260,9 +279,15 @@
                 </p>
             </li>
             <li class="list-subitem">
+                <span>Conseil</span>
+                <p>
+                    Être à l'écoute de votre demande et vous faire part des notions qui entrent en jeu, pour mieux vous aiguiller.
+                </p>
+            </li>
+            <li class="list-subitem">
                 <span>Photographie</span>
                 <p>
-                    Je photographie des manifestations, des lieux abandonnés, des gens, le brouillard et la rue depuis 2018. Venez voir mes photo sur <a class="pencil-link" href="https://500px.com/p/arthaud">
+                    Je fais de la photo d'architecture, de rue et de portraits depuis 2018. Venez voir mes photo sur <a class="pencil-link" href="https://500px.com/p/arthaud">
     <span class="pencil-link-text">mon profil 500px</span>
     <svg class="pencil-link-svg" preserveAspectRatio="none"  width="313" height="205" viewBox="0 0 313 205" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M45.9204 175.976H282.072C351.862 175.976 295.263 19.61 144.646 29.543C-2.25787 39.2311 -88.8487 242.79 210.642 197.237C375.329 172.188 298.933 -40.0885 96.8269 8.00289C-23.4261 36.6173 -18.628 175.976 45.9204 175.976Z" stroke="white"/>
@@ -270,7 +295,6 @@
 </a>! 
                 </p>
             </li>
-            <li>DevOps</li>
             <li>Design</li>
             <li class="list-subitem">
                 <span>Travail du bois</span>
@@ -294,7 +318,7 @@
             <li data-swiper-parallax-x="-400"><img  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Image de TailwindCss"/>TailwindCss</li>
             <li data-swiper-parallax-x="-300"><img  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Image de Figma"/>Figma</li>
             <li data-swiper-parallax-x="-200"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/debian/debian-plain.svg" alt="Image de debian"/>Debian</li>
-            <li data-swiper-parallax-x="-100"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-plain.svg" alt="Image de webpack"/>webpack</li>
+            <li data-swiper-parallax-x="-100"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-plain.svg" alt="Image de webpack"/>Webpack</li>
         </ul>
     </div>
 </section>
