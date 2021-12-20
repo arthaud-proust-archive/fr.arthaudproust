@@ -5,33 +5,33 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
      <url>
-    <loc>http://localhost:4000/realisations/bordeaux-photo-fr/</loc>
-    <lastmod>2021-12-20T17:45:02+01:00</lastmod>
+    <loc>arthaudproust.fr/realisations/bordeaux-photo-fr/</loc>
+    <lastmod>2021-12-20T17:50:44+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     </url><url>
-    <loc>http://localhost:4000/realisations/escalade-montesquieu-fr/</loc>
-    <lastmod>2021-12-20T17:45:02+01:00</lastmod>
+    <loc>arthaudproust.fr/realisations/escalade-montesquieu-fr/</loc>
+    <lastmod>2021-12-20T17:50:44+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     </url><url>
-    <loc>http://localhost:4000/realisations/porte-telephone/</loc>
-    <lastmod>2021-12-20T17:45:02+01:00</lastmod>
+    <loc>arthaudproust.fr/realisations/porte-telephone/</loc>
+    <lastmod>2021-12-20T17:50:44+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     </url><url>
-    <loc>http://localhost:4000/realisations/preview-arthaud-dev/</loc>
-    <lastmod>2021-12-20T17:45:02+01:00</lastmod>
+    <loc>arthaudproust.fr/realisations/preview-arthaud-dev/</loc>
+    <lastmod>2021-12-20T17:50:44+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     </url><url>
-    <loc>http://localhost:4000/404.html</loc>
-    <lastmod>2021-12-20T17:45:02+01:00</lastmod>
+    <loc>arthaudproust.fr/404.html</loc>
+    <lastmod>2021-12-20T17:50:44+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
     </url><url>
-    <loc>http://localhost:4000/</loc>
-    <lastmod>2021-12-20T17:45:02+01:00</lastmod>
+    <loc>arthaudproust.fr/</loc>
+    <lastmod>2021-12-20T17:50:44+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
     </url>
