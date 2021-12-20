@@ -5,6 +5,10 @@
     overflow: hidden;
 }
 
+.full-select {
+    user-select: all !important;
+}
+
 @media screen and (min-width:576px ){
     .hidden-sm {
         display: initial;
