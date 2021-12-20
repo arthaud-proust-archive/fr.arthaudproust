@@ -1,5 +1,5 @@
 <url>
-    <loc>{{ site.produrl }}{{ include.url | remove: "index.html" }}</loc>
+    <loc>{{ site.seo.url }}{{ include.url | remove: "index.html" }}</loc>
     {% if include.sitemap.lastmod -%}
     <lastmod>{{ include.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
     {% elsif include.date -%}
