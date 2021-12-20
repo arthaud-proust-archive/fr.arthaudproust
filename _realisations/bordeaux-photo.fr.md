@@ -11,6 +11,9 @@ imgs:
 link: https://bordeaux-photo.fr
 github: https://github.com/arthaud-proust/fr.bordeaux-photo
 display: true
+sitemap: 
+    priority: 0.5
+    changefreq: weekly
 ---
 
 {% capture content %}

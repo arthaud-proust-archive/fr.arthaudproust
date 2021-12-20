@@ -6,6 +6,9 @@ img: /assets/realisations/pendulum
 link: https://bordeaux-photo.fr
 github: https://github.com/arthaud-proust/dev.arthaud.pendulum
 display: false
+sitemap: 
+    priority: 0.5
+    changefreq: weekly
 ---
 
 {% capture content %}

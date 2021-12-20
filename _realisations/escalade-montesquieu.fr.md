@@ -12,6 +12,9 @@ imgs:
 link: https://escalade-montesquieu.fr
 github: https://github.com/arthaud-proust/fr.escalade-montesquieu
 display: true
+sitemap: 
+    priority: 0.5
+    changefreq: weekly
 ---
 
 {% capture content %}

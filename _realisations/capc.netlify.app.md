@@ -6,6 +6,9 @@ img: /assets/realisations/bordeaux-photo.fr/preview.jpg
 link: https://capc.netlify.app
 github: https://github.com/studio-beauvoir/jekyll-capc
 display: false
+sitemap: 
+    priority: 0.5
+    changefreq: weekly
 ---
 
 {% capture content %}

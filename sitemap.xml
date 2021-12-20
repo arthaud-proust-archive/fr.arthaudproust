@@ -1,16 +1,22 @@
+---
+layout: null
+sitemap:
+    exclude: 'yes'
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>http://arthaudproust.fr/</loc>
-  <lastmod>2021-11-24T22:09:52+00:00</lastmod>
-</url>
-
-
+<urlset       
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+     {% for post in site.realisations -%}
+        {% unless post.display == false -%}
+            {% include components/sitemap-url.html url=post.url sitemap=post.sitemap date=post.date -%}
+        {% endunless -%}
+    {% endfor -%}
+    {% for page in site.pages -%}
+        {% unless page.sitemap.exclude == "yes" or page.url contains "feed.xml" or page.url contains "styles.css" -%}
+            {% include components/sitemap-url.html url=page.url sitemap=page.sitemap date=page.date -%}
+        {% endunless -%}
+    {% endfor %}
 </urlset>

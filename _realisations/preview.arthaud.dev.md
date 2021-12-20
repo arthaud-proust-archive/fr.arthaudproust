@@ -10,6 +10,9 @@ imgs:
     - in-room
 link: https://preview.arthaud.dev
 display: true
+sitemap: 
+    priority: 0.5
+    changefreq: weekly
 ---
 
 {% capture content %}
