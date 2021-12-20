@@ -6,7 +6,8 @@
     "dev": "SET NODE_ENV=development&&webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "SET NODE_ENV=development&&webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "SET NODE_ENV=development&&webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "build": "SET NODE_ENV=production&&webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "build": "SET NODE_ENV=production&&webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "site-build": "jekyll build&&npm run build"
   },
   "repository": {
     "type": "git",
