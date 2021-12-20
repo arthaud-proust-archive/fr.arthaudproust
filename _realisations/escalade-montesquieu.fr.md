@@ -3,13 +3,19 @@ layout: realisation
 title: Escalade Montesquieu
 desc: Site de la section escalade du lycée Montesquieu à Bordeaux.
 img: /assets/realisations/escalade-montesquieu.fr/preview.jpg
+imgsFolder: /assets/realisations/escalade-montesquieu.fr/
+imgs: 
+    - home
+    - login
+    - salle3d
+    - salle3d-2
 link: https://escalade-montesquieu.fr
 github: https://github.com/arthaud-proust/fr.escalade-montesquieu
 display: true
 ---
 
 {% capture content %}
-<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <span>Juin 2020</span>
         <h2>Aux origines</h2>
@@ -17,13 +23,17 @@ display: true
             Guilhem Granier, professeur d'EPS au lycée Montesquieu, me propose de réaliser le site de la section escalade. 
             À ce moment, j'ai rejoint cette section sportive depuis déjà deux ans.
         </p>
-        <p class="pt">
+    </div>
+</li>
+<li class="swiper-slide" data-cover="preview">
+    <div class="intro-card">
+        <p>
             Je grimpe donc régulièrement dans la salle d'escalade, et je me forme en parallèle au développement de site.<br />
             Cette proposition tombe donc à merveille, en lien avec mon projet d'études.
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <h2>Le besoin initial</h2>
         <p>
@@ -31,7 +41,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <h2>Les débuts</h2>
         <p>
@@ -41,7 +51,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/home.jpg">
+<li class="swiper-slide" data-cover="home">
     <div class="intro-card">
         <span>Août 2020</span>
         <h2>Intégration du site</h2>
@@ -51,7 +61,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/login.jpg">
+<li class="swiper-slide" data-cover="login">
     <div class="intro-card">
         <span>Septembre 2020</span>
         <h2>Livraison de la première version</h2>
@@ -60,7 +70,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/escalade-montesquieu.fr/salle3d-2.jpg">
+<li class="swiper-slide" data-cover="salle3d-2">
     <div class="intro-card">
         <span>Depuis Octobre 2020</span>
         <h2>Évolution du site</h2>
@@ -77,6 +87,8 @@ display: true
     title=page.title
     link=page.link
     img=page.img
+    imgs=page.imgs
+    imgsFolder=page.imgsFolder
     desc=page.desc
     content=content
 %}

@@ -1,21 +1,21 @@
-title: "Développeur à Bordeaux - Arthaud Proust"
+title: "Développeur web fullstack à Bordeaux"
 email: your-email@example.com
-version: 1-0-2
+version: 1-0-3
 description: >- # this means to ignore newlines until "baseurl:"
-  "Développeur web passionné et créatif, je conçois des solutions digitales, design et développe des sites. - Arthaud Proust"
+  "Passionné, curieux et créatif, je conçois des solutions digitales, maquette et développe des sites - Arthaud Proust"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 seo: 
   author: "Arthaud Proust"
   url: "https://arthaudproust.fr"
-  title: "Développeur à Bordeaux"
-  desc: "Développeur web passionné et créatif, je conçois des solutions digitales, design et développe des sites. - Arthaud Proust"
+  title: "Développeur web fullstack à Bordeaux"
+  desc: "Passionné, curieux et créatif, je conçois des solutions digitales, maquette et développe des sites - Arthaud Proust"
   links: 
     - https://github.com/arthaud-proust
     - https://www.linkedin.com/in/arthaud-proust/
     - https://twitter.com/arthaud_proust
     - https://www.facebook.com/arthaudproust.fr
-    - https://www.instagram.com/arthau.d/
+    - https://www.instagram.com/arthauproust/
 
 exclude:
   # - .sass-cache/

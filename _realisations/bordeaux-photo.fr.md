@@ -3,13 +3,18 @@ layout: realisation
 title: Bordeaux Photo
 desc: Des jeunes Bordelais et Bordelaises qui organisent des concours photo aux thèmes variés.
 img: /assets/realisations/bordeaux-photo.fr/preview.jpg
+imgsFolder: /assets/realisations/bordeaux-photo.fr/
+imgs: 
+    - site
+    - premier-concours
+    - pause
 link: https://bordeaux-photo.fr
 github: https://github.com/arthaud-proust/fr.bordeaux-photo
 display: true
 ---
 
 {% capture content %}
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <span>Mars 2021</span>
         <h2>Aux origines</h2>
@@ -22,7 +27,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <h2>La création du projet</h2>
         <p>
@@ -30,7 +35,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <h2>Les débuts</h2>
         <p>
@@ -38,7 +43,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/site.jpg">
+<li class="swiper-slide" data-cover="site">
     <div class="intro-card">
         <span>Avril 2021</span>
         <h2>Création du site</h2>
@@ -48,7 +53,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/premier-concours.jpg">
+<li class="swiper-slide" data-cover="premier-concours">
     <div class="intro-card">
         <span>Avril 2021</span>
         <h2>Premier concours</h2>
@@ -57,7 +62,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/site.jpg">
+<li class="swiper-slide" data-cover="site">
     <div class="intro-card">
         <span>Avril à novembre 2021</span>
         <h2>Évolution du projet</h2>
@@ -66,7 +71,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/bordeaux-photo.fr/pause.jpg">
+<li class="swiper-slide" data-cover="pause">
     <div class="intro-card">
         <span>Depuis novembre 2021</span>
         <h2>Nous sommes en pause</h2>
@@ -85,6 +90,8 @@ display: true
     title=page.title
     link=page.link
     img=page.img
+    imgs=page.imgs
+    imgsFolder=page.imgsFolder
     desc=page.desc
     content=content
 %}

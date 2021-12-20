@@ -3,12 +3,17 @@ layout: realisation
 title: Preview
 desc: Visualisez, comparez, organisez, partagez vos photos depuis n'importe quel appareil.
 img: /assets/realisations/preview.arthaud.dev/preview.jpg
+imgsFolder: /assets/realisations/preview.arthaud.dev/
+imgs: 
+    - old-in-room
+    - home
+    - in-room
 link: https://preview.arthaud.dev
 display: true
 ---
 
 {% capture content %}
-<li class="swiper-slide" data-cover="/assets/realisations/preview.arthaud.dev/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <span>Mars 2021</span>
         <h2>Aux origines</h2>
@@ -17,7 +22,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/preview.arthaud.dev/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <!-- <span>Mars 2021</span> -->
         <h2>La (non)solution initiale</h2>
@@ -29,7 +34,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/preview.arthaud.dev/old-in-room.jpg">
+<li class="swiper-slide" data-cover="old-in-room">
     <div class="intro-card">
         <!-- <span>Mars 2021</span> -->
         <h2>Une meilleure idée</h2>
@@ -41,7 +46,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/preview.arthaud.dev/home.jpg">
+<li class="swiper-slide" data-cover="home">
     <div class="intro-card">
         <span>Octobre 2021</span>
         <h2>Reprendre l'existant</h2>
@@ -50,7 +55,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/preview.arthaud.dev/in-room.jpg">
+<li class="swiper-slide" data-cover="in-room">
     <div class="intro-card">
         <!-- <span>Octobre 2021</span> -->
         <h2>Conception intuitive</h2>
@@ -60,7 +65,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/preview.arthaud.dev/in-room.jpg">
+<li class="swiper-slide" data-cover="in-room">
     <div class="intro-card">
         <span>Novembre 2021</span>
         <h2>Site en bêta</h2>
@@ -76,6 +81,8 @@ display: true
     title=page.title
     link=page.link
     img=page.img
+    imgs=page.imgs
+    imgsFolder=page.imgsFolder
     desc=page.desc
     content=content
 %}

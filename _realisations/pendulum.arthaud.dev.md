@@ -85,6 +85,8 @@ display: false
     title=page.title
     link=page.link
     img=page.img
+    imgs=page.imgs
+    imgsFolder=page.imgsFolder
     desc=page.desc
     content=content
 %}

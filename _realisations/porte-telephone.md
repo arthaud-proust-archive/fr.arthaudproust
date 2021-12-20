@@ -2,12 +2,18 @@
 layout: realisation
 title: Porte-téléphone en bois
 desc: Découpe dans un bloc de hêtre
-img: /assets/realisations/porte-telephone/3.jpg
+img: /assets/realisations/porte-telephone/preview.jpg
+imgsFolder: /assets/realisations/porte-telephone/
+imgs:
+    - degrossir
+    - decoupe-interieure
+    - finitions
+    - vernissage
 display: true
 ---
 
 {% capture content %}
-<li class="swiper-slide" data-cover="/assets/realisations/porte-telephone/1.jpg">
+<li class="swiper-slide" data-cover="degrossir">
     <div class="intro-card">
         <span>Avril 2021</span>
         <h2>Découpe dans la buche</h2>
@@ -19,7 +25,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/porte-telephone/1.jpg">
+<li class="swiper-slide" data-cover="degrossir">
     <div class="intro-card">
         <h2>Dégrossir</h2>
         <p>
@@ -31,7 +37,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/porte-telephone/2.jpg">
+<li class="swiper-slide" data-cover="decoupe-interieure">
     <div class="intro-card">
         <h2>L'intérieur</h2>
         <p>
@@ -42,7 +48,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/porte-telephone/4.jpg">
+<li class="swiper-slide" data-cover="finitions">
     <div class="intro-card">
         <h2>Finitions</h2>
         <p>
@@ -53,7 +59,7 @@ display: true
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/porte-telephone/5.jpg">
+<li class="swiper-slide" data-cover="vernissage">
     <div class="intro-card">
         <h2>Vernissage</h2>
         <p>
@@ -71,6 +77,8 @@ display: true
     title=page.title
     link=page.link
     img=page.img
+    imgs=page.imgs
+    imgsFolder=page.imgsFolder
     desc=page.desc
     content=content
 %}

@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
         left: document.querySelector('.pageArrow.left'),
         right: document.querySelector('.pageArrow.right')
     };
+    try {
     const sectionSwiper = new Swiper(sectionEl, {
         // Optional parameters
         direction: 'vertical',
@@ -19,6 +20,37 @@ window.addEventListener('DOMContentLoaded', function() {
         },
         resistanceRatio: 0.9,
     });
+    sectionSwiper.on("slideChange", function(e) {
+        // e.activeIndex
+        // try {
+        //     const section = e.el.closest('section');
+        //     const imageCover = document.getElementById('section-image-cover');
+        //     if(!imageCover) return;
+        //     const card = e.el.querySelectorAll('.swiper-slide')[e.activeIndex+1];
+        //     const img = card.dataset.cover;
+        //     if(!img) return;
+        //     imageCover.src = img;
+        // } catch(e) {}
+        try {
+            const imageCoverContainer = document.getElementById('section-image-cover-container');
+
+            const imgs = Array.from(imageCoverContainer.children);
+            imgs.forEach(img=>img.classList.add('d-none'));
+
+            const newI = window.screen.width>576?e.activeIndex+1:e.activeIndex;
+
+            const card = e.el.querySelectorAll('.swiper-slide')[newI];
+            if(!card) throw new Error();
+            const imgName = card.dataset.cover;
+            console.log(imgName);
+            if(!imgName) throw new Error();
+            const img = imageCoverContainer.querySelector(`#sic-${imgName}`);
+            img.classList.remove('d-none');
+        } catch(e) {
+            document.getElementById('section-image-cover-container').querySelector(`#sic-preview`).classList.remove('d-none');
+        }
+    })
+    } catch(e){}
     const mainSwiper = new Swiper('.main-swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -88,20 +120,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-    sectionSwiper.on("slideChange", function(e) {
-        // e.activeIndex
-        try {
-            const section = e.el.closest('section');
-            const imageCover = document.getElementById('section-image-cover');
-            if(!imageCover) return;
-            const card = e.el.querySelectorAll('.swiper-slide')[e.activeIndex+1];
-            const img = card.dataset.cover;
-            if(!img) return;
-            imageCover.src = img;
-        } catch(e) {}
-    })
+    
 
     function refreshPageArrows() {
+        console.log(mainSwiper);
         pageArrows.left.classList.toggle('hidden', mainSwiper.isBeginning);
         pageArrows.right.classList.toggle('hidden', mainSwiper.isEnd || (mainSwiper.isBeginning && mainSwiper.slides.length===0));
     }
@@ -114,7 +136,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function setMenu(closed) {
         document.body.dataset.menuOpen = closed;
-        document.getElementById('menu-toggle').src= `assets/${closed?'close':'menu'}.svg`;
+        document.getElementById('menu-toggle').src= `/assets/${closed?'close':'menu'}.svg`;
     }
 
     document.getElementById('links').querySelectorAll('a').forEach(link=>link.addEventListener('click', function() {
