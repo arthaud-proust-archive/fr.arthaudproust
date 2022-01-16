@@ -119,12 +119,12 @@ window.addEventListener('DOMContentLoaded', function() {
         ){
             if(sectionSwiper.isBeginning) {
                 console.log('at beginning');
-                try{sectionSwiper.slideNext(0);}catch(e){}
+                try{sectionSwiper.slideNext();}catch(e){}
             } 
             if(sectionSwiper.isEnd) {
                 console.log('at end');
                 console.log('at beginning');
-                try{sectionSwiper.slidePrev(0);}catch(e){}
+                try{sectionSwiper.slidePrev();}catch(e){}
             } 
             console.log('?');
             mainSwiper.mousewheel.disable();
