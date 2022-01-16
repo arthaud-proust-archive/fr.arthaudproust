@@ -78,6 +78,12 @@
         font-size: 1.2rem;
     }
 }
+.swipe-indication-vertical {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .swipe-animation {
     padding: 1rem 0;
     box-sizing: content-box;
@@ -101,6 +107,14 @@
         animation: swipeAnim 2s infinite;
     }
 }
+
+.swipe-animation-vertical {
+    margin-top: 2rem;
+    padding: 0;
+    --w:50px;
+    transform: rotate(90deg) translateY(-15px);
+}
+
 
 section {
     transition: transform 0.2s;
@@ -131,6 +145,7 @@ em, .link {
         position: absolute;
         height: 60%;
         max-height: 3.5rem;
+        // width: 0;
         width: 80%;
         background: #d8ad7d9d;
         left: -1rem;
@@ -138,6 +153,16 @@ em, .link {
         mix-blend-mode:overlay;
         transition: 1s;
         transition-timing-function: cubic-bezier(.07,.23,0,.93);
+    }
+
+    &.toAnimate {
+
+        &::after {
+            width: 0;
+        }
+        &.animate::after {
+            width: 80%;
+        }
     }
 
     &:hover::after {

@@ -1,21 +1,26 @@
 
-<section class="swiper-slide" data-hash="realisations">
+<section class="swiper-slide" data-hash="realisations" aria-title="Réalisations">
     <div class="sub">
         <div class="hidden-sm">
-            <h2 class="title">Découvrez <br/>mes <em>réalisations</em></h2>
+            <h2 class="title">Découvrez <br/>mes <em class="toAnimate">réalisations</em></h2>
             <h3>Des sites, des photos, des projets</h3>
         </div>
         <div class="section-swiper">
             <ul class="swiper-wrapper">
 
                 <li class="swiper-slide"></li>
+                
 
                 
                 <li class="swiper-slide hidden-xl">
                     <div class="intro-card">
-                        <h2 class="title">Découvrez <br/>mes <em>réalisations</em></h2>
-                        <h3>Des sites, des photos, des projets</h3>
+                        <h2 class="title">Découvrez <br/>mes <em class="toAnimate">réalisations</em></h2>
+                        <h3 class="pb-3">Des sites, des photos, des projets</h3>
                     </div>
+                </li>
+                <li class="swiper-slide">
+                    {% include components/swipe-indic-vertical.html %}
+                    
                 </li>
                 {% for realisation in site.realisations %}
                     {% if realisation.display %}

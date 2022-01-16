@@ -4,7 +4,44 @@ window.mobileAndTabletCheck = function() {
     return check;
 };
 
+function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Fallback: Copying text command was ' + msg);
+    } catch (err) {
+    console.error('Fallback: Oops, unable to copy', err);
+    }
+
+    document.body.removeChild(textArea);
+}
+function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(text);
+    return;
+    }
+    navigator.clipboard.writeText(text).then(function() {
+    console.log('Async: Copying to clipboard was successful!');
+    }, function(err) {
+    console.error('Async: Could not copy text: ', err);
+    });
+}
+
 window.addEventListener('DOMContentLoaded', function() {
+    const mainSlideStepper = document.getElementById('mainSlideStepper');
+    const mainSlideName = document.getElementById('mainSlideName');
     const sections = Array.from(document.querySelectorAll('#main > div > section'));
     const sectionEl = document.querySelector('.section-swiper');
     var sectionSwiper;
@@ -120,22 +157,32 @@ window.addEventListener('DOMContentLoaded', function() {
     const updateMainScroll = function (e) {
         console.log('szszzzz');
         refreshPageArrows();
-        if(
-            mainSwiper.slides[mainSwiper.activeIndex].contains(sectionSwiper.el)
-        ){
-            if(sectionSwiper.isBeginning) {
-                console.log('at beginning');
-                try{sectionSwiper.slideNext();}catch(e){}
-            } 
-            if(sectionSwiper.isEnd) {
-                console.log('at end');
-                console.log('at beginning');
-                try{sectionSwiper.slidePrev();}catch(e){}
-            } 
-            console.log('?');
-            mainSwiper.mousewheel.disable();
-        }else {
-            mainSwiper.mousewheel.enable();
+
+        if(mainSwiper.slides.length > 0) {
+            mainSlideName.innerText = `${mainSwiper.slides[mainSwiper.activeIndex].getAttribute('aria-title')}`;
+            mainSlideStepper.innerText = `${mainSwiper.slides[mainSwiper.activeIndex].getAttribute('aria-label')} -`;
+            // mainSlideName.innerText = mainSwiper.slides[mainSwiper.activeIndex]
+            refreshAnimations(mainSwiper.slides[mainSwiper.activeIndex]);
+            if(
+                mainSwiper.slides[mainSwiper.activeIndex].contains(sectionSwiper.el)
+            ){
+                if(sectionSwiper.isBeginning) {
+                    console.log('at beginning');
+                    try{sectionSwiper.slideNext();}catch(e){}
+                } 
+                if(sectionSwiper.isEnd) {
+                    console.log('at end');
+                    console.log('at beginning');
+                    try{sectionSwiper.slidePrev();}catch(e){}
+                } 
+                console.log('?');
+                mainSwiper.mousewheel.disable();
+            }else {
+                mainSwiper.mousewheel.enable();
+            }
+        } else {
+            mainSlideName.innerText = `${document.querySelector('.swiper-slide[aria-title]').getAttribute('aria-title')}`;
+            mainSlideStepper.innerText = ``;
         }
     };
 
@@ -147,7 +194,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function slideToHash(to) {
         if(to==="") return;    
-        mainSwiper.slideTo(sections.indexOf(document.querySelector(`section[data-hash="${to}"]`)));
+        mainSwiper.slideTo(sections.indexOf(document.querySelector(`section[data-hash="${to}"]`)), 0);
     }
 
     slideToHash(window.location.hash.replace('#',''));
@@ -169,7 +216,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-    
+    function refreshAnimations(el) {
+        setTimeout(()=>{
+            el.querySelectorAll('.toAnimate').forEach(function(element) {
+                element.classList.add('animate');
+            })
+        }, mobileAndTabletCheck()?50:500);
+    }
 
     function refreshPageArrows() {
         console.log(mainSwiper);
@@ -213,4 +266,9 @@ window.addEventListener('DOMContentLoaded', function() {
     })
 
 
+    document.querySelectorAll('.toCopy').forEach(element => {
+        element.addEventListener('click', function() {
+            copyTextToClipboard(this.innerText);
+        })
+    });
 });

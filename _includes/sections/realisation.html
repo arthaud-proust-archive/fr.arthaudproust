@@ -1,4 +1,4 @@
-<section class="swiper-slide" data-hash="realisations">
+<section class="swiper-slide" data-hash="realisations" aria-title="{{ include.title }}">
     <div class="sub noMixBlend overflow-hidden">
         
         <div class="img-wrapper" id="section-image-cover-container">
@@ -17,6 +17,7 @@
                         {% if include.subtitle %}
                         <h3>{{ include.subtitle }}</h3>
                         {% endif %}
+                        {% include components/swipe-indic-vertical.html %}
                     </div>
                 </li>
                 <li class="swiper-slide">
