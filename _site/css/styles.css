@@ -76,7 +76,7 @@
 
 .swipe-indication p { font-size: 1.2rem; }
 
-.swipe-indication-vertical { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.swipe-indication-vertical { width: 100%; display: flex; gap: 10px; flex-direction: row; align-items: center; }
 
 .swipe-animation { padding: 1rem 0; box-sizing: content-box; position: relative; --h: 15px; --w: 200px; width: var(--w); height: var(--h); }
 

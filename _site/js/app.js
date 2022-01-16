@@ -113,12 +113,10 @@ window.addEventListener('DOMContentLoaded', function() {
             if(mainSwiper.slides.length>0 && !mainSwiper.isBeginning) mainSwiper.slidePrev();
         });
         sectionSwiper.on("reachEnd", function(e) {
-            console.log(mainSwiper);
             if(mainSwiper.slides.length>0 && !mainSwiper.isEnd) mainSwiper.slideNext();
         });
         
         sectionSwiper.on("slideChange", function(e) {
-            console.log(this);
             // e.activeIndex
             // try {
             //     const section = e.el.closest('section');
@@ -140,12 +138,13 @@ window.addEventListener('DOMContentLoaded', function() {
                 const card = e.el.querySelectorAll('.swiper-slide')[newI];
                 if(!card) throw new Error();
                 const imgName = card.dataset.cover;
-                console.log(imgName);
                 if(!imgName) throw new Error();
                 const img = imageCoverContainer.querySelector(`#sic-${imgName}`);
                 img.classList.remove('d-none');
             } catch(e) {
-                document.getElementById('section-image-cover-container').querySelector(`#sic-preview`).classList.remove('d-none');
+                try {
+                    document.getElementById('section-image-cover-container').querySelector(`#sic-preview`).classList.remove('d-none');
+                }catch(e){}
             }
         })
     } catch(e){}
@@ -155,7 +154,6 @@ window.addEventListener('DOMContentLoaded', function() {
     
 
     const updateMainScroll = function (e) {
-        console.log('szszzzz');
         refreshPageArrows();
 
         if(mainSwiper.slides.length > 0) {
@@ -167,15 +165,11 @@ window.addEventListener('DOMContentLoaded', function() {
                 mainSwiper.slides[mainSwiper.activeIndex].contains(sectionSwiper.el)
             ){
                 if(sectionSwiper.isBeginning) {
-                    console.log('at beginning');
                     try{sectionSwiper.slideNext();}catch(e){}
                 } 
                 if(sectionSwiper.isEnd) {
-                    console.log('at end');
-                    console.log('at beginning');
                     try{sectionSwiper.slidePrev();}catch(e){}
                 } 
-                console.log('?');
                 mainSwiper.mousewheel.disable();
             }else {
                 mainSwiper.mousewheel.enable();
@@ -225,7 +219,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     function refreshPageArrows() {
-        console.log(mainSwiper);
         pageArrows.left.classList.toggle('hidden', mainSwiper.isBeginning);
         pageArrows.right.classList.toggle('hidden', mainSwiper.isEnd || (mainSwiper.isBeginning && mainSwiper.slides.length===0));
     }

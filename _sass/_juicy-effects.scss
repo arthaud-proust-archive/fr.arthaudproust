@@ -81,7 +81,8 @@
 .swipe-indication-vertical {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    flex-direction: row ;
     align-items: center;
 }
 .swipe-animation {
