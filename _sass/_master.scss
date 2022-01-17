@@ -534,7 +534,7 @@ section:nth-child(2n+1) {
 
     > span {
         display: flex;
-        flex-flow: row-reverse nowrap;
+        flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
     
@@ -547,7 +547,7 @@ section:nth-child(2n+1) {
             background: url(/assets/more.svg);
             height: 20px;
             width: 20px;
-            margin-right: 10px;
+            margin-left: 10px;
             transition: .2s;
         }
     }

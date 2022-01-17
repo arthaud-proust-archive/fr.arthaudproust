@@ -300,9 +300,9 @@ section:nth-child(2n+1) { background-color: black; }
 
 #main ul.list-subitems li, #main ol.list-subitems li, .lessMore { overflow: hidden; display: flex; flex-direction: column; align-content: flex-start; align-items: flex-start; }
 
-#main ul.list-subitems li > span, #main ol.list-subitems li > span, .lessMore > span { display: flex; flex-flow: row-reverse nowrap; justify-content: center; align-items: center; }
+#main ul.list-subitems li > span, #main ol.list-subitems li > span, .lessMore > span { display: flex; flex-flow: row nowrap; justify-content: center; align-items: center; }
 
-#main ul.list-subitems li > span::after, #main ol.list-subitems li > span::after, .lessMore > span::after { align-content: center; justify-content: center; align-items: center; display: flex; content: ' '; background: url(/assets/more.svg); height: 20px; width: 20px; margin-right: 10px; transition: .2s; }
+#main ul.list-subitems li > span::after, #main ol.list-subitems li > span::after, .lessMore > span::after { align-content: center; justify-content: center; align-items: center; display: flex; content: ' '; background: url(/assets/more.svg); height: 20px; width: 20px; margin-left: 10px; transition: .2s; }
 
 #main ul.list-subitems li.list-subitem:hover > span::after, #main ol.list-subitems li.list-subitem:hover > span::after, .lessMore:hover > span::after { transform: rotate(-10deg) scale(1.5); }
 
