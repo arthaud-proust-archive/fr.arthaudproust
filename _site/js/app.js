@@ -261,7 +261,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.toCopy').forEach(element => {
         element.addEventListener('click', function() {
-            copyTextToClipboard(this.innerText);
+            element.dataset.text = this.innerText;
+            element.innerText = `${element.dataset.text} (copié!)`;
+            copyTextToClipboard(element.dataset.text);
+            setTimeout(function() {
+                element.innerText = element.dataset.text;
+            }, 4000);
         })
     });
 });
