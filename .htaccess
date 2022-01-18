@@ -20,7 +20,7 @@ ErrorDocument 404 /404.html
 <Ifmodule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
     
-    <FilesMatch "\\.(ico|jpe?g|png|gif|swf|svg)$">
+    <FilesMatch "\\.(ico|jpe?g|png)$">
         Header set Cache-Control "max-age=2592000, public, must-revalidate"
     </FilesMatch>
 
@@ -52,7 +52,6 @@ ErrorDocument 404 /404.html
   ExpiresByType image/png "access plus 2592000 seconds"
   ExpiresByType image/jpg "access plus 2592000 seconds"
   ExpiresByType image/jpeg "access plus 2592000 seconds"
-  ExpiresByType image/svg "access plus 2592000 seconds"
 
   # CSS
   ExpiresByType text/css "access 216000 seconds"
