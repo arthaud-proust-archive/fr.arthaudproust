@@ -117,6 +117,12 @@ window.addEventListener('DOMContentLoaded', function() {
         });
         
         sectionSwiper.on("slideChange", function(e) {
+            if(Object.keys(sectionSwiper.slides[sectionSwiper.activeIndex].dataset).includes('skipNext')) {
+                sectionSwiper.slideNext();
+            }
+            if(Object.keys(sectionSwiper.slides[sectionSwiper.activeIndex].dataset).includes('skipPrev')) {
+                sectionSwiper.slidePrev();
+            }
             // e.activeIndex
             // try {
             //     const section = e.el.closest('section');
