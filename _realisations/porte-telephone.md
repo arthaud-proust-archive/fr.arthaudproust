@@ -1,15 +1,15 @@
 ---
 layout: realisation
 title: Porte-téléphone en bois
+folder: porte-telephone/
 desc: Découpe dans un bloc de hêtre
-img: /assets/realisations/porte-telephone/preview.jpg
-imgsFolder: /assets/realisations/porte-telephone/
+img: preview
 imgs:
     - degrossir
     - decoupe-interieure
     - finitions
     - vernissage
-display: true
+published: true
 sitemap: 
     priority: 0.5
     changefreq: weekly
@@ -77,11 +77,6 @@ sitemap:
 
 {% 
     include sections/realisation.html
-    title=page.title
-    link=page.link
-    img=page.img
-    imgs=page.imgs
-    imgsFolder=page.imgsFolder
-    desc=page.desc
+    page=page
     content=content
 %}

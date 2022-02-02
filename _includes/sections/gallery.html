@@ -1,0 +1,7 @@
+<section class="swiper-slide" data-hash="galleries" aria-title="Galerie {{ include.title }}">
+    <div class="noMixBlend overflow-visible">
+        {% for img in include.imgs %}
+            <img class="hidden-smd full d-none" id="sic-{{img}}" src="{{ include.imgsFolder | append: img | append: '.jpg' }}">
+        {% endfor %}
+    </div>  
+</section>

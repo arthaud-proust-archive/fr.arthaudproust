@@ -113,18 +113,7 @@ p {
     font-size: 1.3rem;
     font-weight: 100;
 }
-.pt {
-    margin-top: 1rem;
-}
-.pb {
-    margin-bottom: 1rem;
-}
-.pb-2 {
-    margin-bottom: 2rem;
-}
-.pb-3 {
-    margin-bottom: 3rem;
-}
+
 
 .decoration-line {
     background: #000001;
@@ -135,7 +124,7 @@ p {
         position: relative;
         height: 100%;
         width: 100%;
-        cursor: pointer;
+        // cursor: pointer;
         user-select: none;
         display: flex;
         justify-content: center;
@@ -265,9 +254,19 @@ body[data-menu-open="true"] #top-text {
         transition: opacity .3s;
         transform: translate(-50%, -50%) rotate(13deg);
     }
-    body > header ul li a:hover::after, body > footer ul li a:hover::after {
+    body > header ul li a:hover::after, 
+    body > footer ul li a:hover::after {
         opacity: 1;
     }
+
+    body > header ul li a.active, 
+    body > footer ul li a.active {
+        font-weight: bolder;    
+    }
+    // body > header ul:hover li a.active::after, 
+    // body > footer ul:hover li a.active::after {
+    //     opacity: 0.6 !important;
+    // }
 }
 body > header ul, body > footer ul {
     display: flex;
@@ -580,6 +579,7 @@ section:nth-child(2n+1) {
 #main ul.list-subitems li.list-subitem[data-open="true"] p,
 #main ol.list-subitems li.list-subitem[data-open="true"] p,
 .lessMore[data-open="true"] > p {
+    margin-top: 1rem;
     height: auto;
 }
 

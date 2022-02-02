@@ -1,9 +1,9 @@
 ---
 layout: realisation
 title: Escalade Montesquieu
+folder: escalade-montesquieu/
 desc: Site de la section escalade du lycée Montesquieu à Bordeaux.
-img: /assets/realisations/escalade-montesquieu.fr/preview.jpg
-imgsFolder: /assets/realisations/escalade-montesquieu.fr/
+img: preview
 imgs: 
     - home
     - login
@@ -11,7 +11,7 @@ imgs:
     - salle3d-2
 link: https://escalade-montesquieu.fr
 github: https://github.com/arthaud-proust/fr.escalade-montesquieu
-display: true
+published: true
 sitemap: 
     priority: 0.5
     changefreq: weekly
@@ -87,11 +87,6 @@ sitemap:
 
 {% 
     include sections/realisation.html
-    title=page.title
-    link=page.link
-    img=page.img
-    imgs=page.imgs
-    imgsFolder=page.imgsFolder
-    desc=page.desc
+    page=page
     content=content
 %}

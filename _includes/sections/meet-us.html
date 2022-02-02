@@ -1,16 +1,17 @@
 <section class="swiper-slide" data-hash="contact" aria-title="Contact">
     <div class="sub">
-        <div class="hidden-sm"></div>
-        <h2>Un projet, une idée, envie de discuter?</h2>
         <div>
             <!-- <h2 class="title">Et si on <em>travaillait</em> ensemble?</h2> -->
             <h2 class="title">Rencontrons nous autour <em class="toAnimate">d'un café</em></h2>
         </div>
+        <h2>Un projet, une idée, envie de discuter?</h2>
+        <div class="hidden-sm"></div>
+        
         <ul>
-            <li class="fall full-select toCopy">contact@arthaudproust.fr</li>
-            <li class="fall full-select toCopy">07 83 39 28 88</li>
-            <li>{% include components/link.html href="https://www.instagram.com/arthaudproust/" content="Via Instagram" %}</li>
-            <li>{% include components/link.html href="https://www.linkedin.com/in/arthaud-proust/" content="Ou via Linkedin?" %}</li>
+            <li class="fall full-select toCopy">{{ site.email }}</li>
+            <li class="fall full-select toCopy">{{ site.phone }}</li>
+            <li>{% include components/link.html href=site.seo.links.instagram content="Via Instagram" %}</li>
+            <li>{% include components/link.html href=site.seo.links.linkedin content="Ou via Linkedin?" %}</li>
         </ul>
     </div>
 </section>

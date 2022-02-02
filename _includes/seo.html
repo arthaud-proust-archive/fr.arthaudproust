@@ -56,9 +56,8 @@
         "url": "{{ site.seo.url }}",
         "address": "Bordeaux",
         "sameAs": [
-            {% assign length = site.seo.links.size | minus: 1 -%}
-            {% for i in (0..length) -%}
-            "{{ site.seo.links[i] }}"{% if length>i -%},{% endif %}
+            {% for link in site.seo.links -%}
+            "{{ link[1] }}"{% if forloop.last == false -%},{% endif %}
             {% endfor -%}
         ]
     }

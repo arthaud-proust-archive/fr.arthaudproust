@@ -1,15 +1,15 @@
 ---
 layout: realisation
 title: Preview
+folder: preview/
 desc: Visualisez, comparez, organisez, partagez vos photos depuis n'importe quel appareil.
-img: /assets/realisations/preview.arthaud.dev/preview.jpg
-imgsFolder: /assets/realisations/preview.arthaud.dev/
+img: preview
 imgs: 
     - old-in-room
     - home
     - in-room
 link: https://preview.arthaud.dev
-display: true
+published: true
 sitemap: 
     priority: 0.5
     changefreq: weekly
@@ -81,11 +81,6 @@ sitemap:
 
 {% 
     include sections/realisation.html
-    title=page.title
-    link=page.link
-    img=page.img
-    imgs=page.imgs
-    imgsFolder=page.imgsFolder
-    desc=page.desc
+    page=page
     content=content
 %}

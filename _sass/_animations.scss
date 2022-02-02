@@ -20,6 +20,12 @@
     }
 }
 
+@keyframes nod {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(10%) }
+    0% { transform: translateY(0) }
+}
+
 @keyframes draw-in {
     from {
         stroke-dashoffset: 0;

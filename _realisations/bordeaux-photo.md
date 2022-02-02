@@ -1,18 +1,28 @@
 ---
 layout: realisation
-title: Simulation de pendule
-desc: Adaptation du calcul sur une animation modulable.
-img: /assets/realisations/pendulum
+title: Bordeaux Photo
+folder: bordeaux-photo/
+desc: Des jeunes Bordelais et Bordelaises qui organisent des concours photo aux thèmes variés.
+img: preview
+technos: 
+    - laravel
+    - mysql
+    - javascript
+    - tailwindcss
+imgs: 
+    - site
+    - premier-concours
+    - pause
 link: https://bordeaux-photo.fr
-github: https://github.com/arthaud-proust/dev.arthaud.pendulum
-display: false
+github: https://github.com/arthaud-proust/fr.bordeaux-photo
+published: true
 sitemap: 
     priority: 0.5
     changefreq: weekly
 ---
 
 {% capture content %}
-<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <span>Mars 2021</span>
         <h2>Aux origines</h2>
@@ -25,7 +35,7 @@ sitemap:
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <h2>La création du projet</h2>
         <p>
@@ -33,7 +43,7 @@ sitemap:
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/preview.jpg">
+<li class="swiper-slide" data-cover="preview">
     <div class="intro-card">
         <h2>Les débuts</h2>
         <p>
@@ -41,7 +51,7 @@ sitemap:
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/site.jpg">
+<li class="swiper-slide" data-cover="site">
     <div class="intro-card">
         <span>Avril 2021</span>
         <h2>Création du site</h2>
@@ -51,7 +61,7 @@ sitemap:
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/premier-concours.jpg">
+<li class="swiper-slide" data-cover="premier-concours">
     <div class="intro-card">
         <span>Avril 2021</span>
         <h2>Premier concours</h2>
@@ -60,7 +70,7 @@ sitemap:
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/site.jpg">
+<li class="swiper-slide" data-cover="site">
     <div class="intro-card">
         <span>Avril à novembre 2021</span>
         <h2>Évolution du projet</h2>
@@ -69,7 +79,7 @@ sitemap:
         </p>
     </div>
 </li>
-<li class="swiper-slide" data-cover="/assets/realisations/pendulum.arthaud.dev/pause.jpg">
+<li class="swiper-slide" data-cover="pause">
     <div class="intro-card">
         <span>Depuis novembre 2021</span>
         <h2>Nous sommes en pause</h2>
@@ -85,11 +95,6 @@ sitemap:
 
 {% 
     include sections/realisation.html
-    title=page.title
-    link=page.link
-    img=page.img
-    imgs=page.imgs
-    imgsFolder=page.imgsFolder
-    desc=page.desc
+    page=page
     content=content
 %}

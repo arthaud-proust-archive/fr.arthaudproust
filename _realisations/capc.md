@@ -1,11 +1,12 @@
 ---
 layout: realisation
 title: Site du CAPC Bordeaux
+folder: capc/
 desc: "Projet BUT MMI Bordeaux: refonte ergonomique et graphique d'un site."
-img: /assets/realisations/bordeaux-photo.fr/preview.jpg
+img: preview
 link: https://capc.netlify.app
 github: https://github.com/studio-beauvoir/jekyll-capc
-display: false
+published: false
 sitemap: 
     priority: 0.5
     changefreq: weekly
@@ -81,11 +82,6 @@ sitemap:
 
 {% 
     include sections/realisation.html
-    title=page.title
-    link=page.link
-    img=page.img
-    imgs=page.imgs
-    imgsFolder=page.imgsFolder
-    desc=page.desc
+    page=page
     content=content
 %}

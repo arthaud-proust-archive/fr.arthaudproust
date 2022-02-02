@@ -2,46 +2,63 @@
 <section class="swiper-slide" data-hash="realisations" aria-title="Réalisations">
     <div class="sub">
         <div class="hidden-sm">
-            <h2 class="title">Découvrez <br/>mes <em class="toAnimate">réalisations</em></h2>
-            <h3>Des sites, des photos, des projets</h3>
+            <!-- <h3 class="pb">
+                Réalisations
+            </h3> -->
+            <h2 class="title">Développeur <em class="toAnimate">créatif</em></h2>
+            
         </div>
         <div class="section-swiper">
             <ul class="swiper-wrapper">
 
-                <li class="swiper-slide" data-skip-next></li>
+                <!-- <li class="swiper-slide" data-skip-next></li> -->
                 
 
                 
                 <li class="swiper-slide hidden-xl">
                     <div class="intro-card">
-                        <h2 class="title">Découvrez <br/>mes <em class="toAnimate">réalisations</em></h2>
-                        <h3 class="pb-3">Des sites, des photos, des projets</h3>
+                        <h2 class="title">Développeur <em class="toAnimate">créatif</em></h2>
                     </div>
                 </li>
                 <li class="swiper-slide">
-                    {% include components/swipe-indic-vertical.html %}
-                    
+                    <ul class="card" style="padding: 0;">
+                        <li>
+
+                            <img class="my-auto hoverable nod xlarge noTurn" src="/assets/svg/arrow-down.svg">
+                            <div>
+                                <h3>Réalisations</h3>
+                                <span>Scroller ou Cliquer et glisser</span>
+                            </div> 
+                        </li>
+                    <!-- {% include components/swipe-indic-vertical.html %} -->
+                    </ul>
                 </li>
                 {% for realisation in site.realisations %}
-                    {% if realisation.display %}
-                        <li class="swiper-slide">
-                            {% 
-                                include components/realisation-card.html 
-                                title=realisation.title
-                                desc=realisation.desc
-                                img=realisation.img
-                                link=realisation.url
-                            %}
-                        </li>
-                    {% endif %}
+                    <li class="swiper-slide">
+                        {% 
+                            include components/realisation-card.html 
+                            title=realisation.title
+                            desc=realisation.desc
+                            img=realisation.img
+                            folder=realisation.folder
+                            link=realisation.url
+                        %}
+                    </li>
                 {% endfor %}
 
                 <li class="swiper-slide">
                     <ul class="card" style="padding: 0;">
                         <li><h2>Explorez les sites autrement</h2></li>
-                        <li>{% include components/link.html href="https://hub.arthaud.dev" content="En action" %}</li>
+                        <!-- <li>{% include components/link.html href="https://hub.arthaud.dev" content="En action" %}</li> -->
                         <li>{% include components/link.html href="https://github.com/arthaud-proust" content="Sur github" %}</li>
-                        <li>{% include components/swipe-indic.html %}</li>
+                        <li>
+                            <div>
+                                <h3>À propos de moi </h3>
+                                Cliquer et glisser
+                            </div> 
+                            <div class="pl-2 r-270"><img class="nod hoverable m-auto xlarge noTurn noActive" src="/assets/svg/arrow-down.svg"></div>
+                        </li>
+                        <!-- <li>{% include components/swipe-indic.html %}</li> -->
                     </ul>
                 </li>
 

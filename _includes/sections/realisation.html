@@ -1,11 +1,11 @@
-<section class="swiper-slide" data-hash="realisations" aria-title="{{ include.title }}">
+<section class="swiper-slide" data-hash="realisations" aria-title="{{ include.page.title }}">
     <div class="sub noMixBlend overflow-hidden">
         
         <div class="img-wrapper" id="section-image-cover-container">
-            <img class="hidden-smd full" id="sic-preview" src="{{ include.img }}">
-            <!-- <img class="hidden-smd full" id="section-image-cover" src="{{ include.img }}"> -->
-            {% for img in include.imgs %}
-                <img class="hidden-smd full d-none" id="sic-{{img}}" src="{{ include.imgsFolder | append: img | append: '.jpg' }}">
+            <img class="hidden-smd full" id="sic-preview" src="{{ site.imgFolder.realisations | append: include.page.folder | append: include.page.img | append: '.jpg' }}">
+            <!-- <img class="hidden-smd full" id="section-image-cover" src="{{ include.page.img }}"> -->
+            {% for img in include.page.imgs %}
+                <img class="hidden-smd full d-none" id="sic-{{img}}" src="{{ site.imgFolder.realisations | append: include.page.folder | append: img | append: '.jpg' }}">
             {% endfor %}
         </div>
 
@@ -13,9 +13,9 @@
             <ul class="swiper-wrapper">
                 <li class="swiper-slide hidden-xl">
                     <div class="intro-card">
-                        <h2 class="title">{{ include.title }}</h2>
-                        {% if include.subtitle %}
-                        <h3>{{ include.subtitle }}</h3>
+                        <h2 class="title">{{ include.page.title }}</h2>
+                        {% if include.page.subtitle %}
+                        <h3>{{ include.page.subtitle }}</h3>
                         {% endif %}
                         {% include components/swipe-indic-vertical.html %}
                     </div>
@@ -23,19 +23,30 @@
                 <li class="swiper-slide">
                     <div class="intro-card">
                         <h2>Réalisation</h2>
-                        <p>{{ include.desc }}</p>
+                        
+                        <p>{{ include.page.desc }}</p>
+
+                        {% if include.page.technos %}
+                        <br/>
+                        <h2>Technos utilisées</h2>
+                        <span>
+                            {% for techno in include.page.technos %}
+                                <img src="{{ site.data.devicon[techno] }}" alt="techno">
+                            {% endfor %}
+                        </span>
+                        {% endif %}
                     </div>
                 </li>
                 {{ content }}
                 <li class="swiper-slide">
                     <ul class="card" style="padding: 0;">
                         <li><h2>Et ensuite?</h2></li>
-                        {% if include.link %}
-                        <li>{% include components/link.html href=include.link content="Voir en action" %}</li>
+                        {% if include.page.link %}
+                        <li>{% include components/link.html href=include.page.link content="Voir en action" %}</li>
                         {% endif %}
                         
-                        {% if include.github %}
-                        <li>{% include components/link.html href=include.github content="Voir sur github" %}</li>
+                        {% if include.page.github %}
+                        <li>{% include components/link.html href=include.page.github content="Voir sur github" %}</li>
                         {% endif %}
                         <li>{% include components/link.html href="/#realisations" content="Retour aux réalisations" %}</li>
                     </ul>
@@ -43,9 +54,9 @@
             </ul>
         </div>
         <div class="hidden-sm">
-            <h2 class="title">{{ include.title }}</h2>
-            {% if include.subtitle %}
-            <h3>{{ include.subtitle }}</h3>
+            <h2 class="title">{{ include.page.title }}</h2>
+            {% if include.page.subtitle %}
+            <h3>{{ include.page.subtitle }}</h3>
             {% endif %}
         </div>
        

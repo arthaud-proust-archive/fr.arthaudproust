@@ -42,6 +42,7 @@ function copyTextToClipboard(text) {
 window.addEventListener('DOMContentLoaded', function() {
     const mainSlideStepper = document.getElementById('mainSlideStepper');
     const mainSlideName = document.getElementById('mainSlideName');
+    const links = document.getElementById('links').querySelectorAll('a');
     const sections = Array.from(document.querySelectorAll('#main > div > section'));
     const sectionEl = document.querySelector('.section-swiper');
     var sectionSwiper;
@@ -117,9 +118,9 @@ window.addEventListener('DOMContentLoaded', function() {
         });
         
         sectionSwiper.on("slideChange", function(e) {
-            if(Object.keys(sectionSwiper.slides[sectionSwiper.activeIndex].dataset).includes('skipNext')) {
-                sectionSwiper.slideNext();
-            }
+            // if(Object.keys(sectionSwiper.slides[sectionSwiper.activeIndex].dataset).includes('skipNext')) {
+            //     sectionSwiper.slideNext();
+            // }
             if(Object.keys(sectionSwiper.slides[sectionSwiper.activeIndex].dataset).includes('skipPrev')) {
                 sectionSwiper.slidePrev();
             }
@@ -162,16 +163,21 @@ window.addEventListener('DOMContentLoaded', function() {
     const updateMainScroll = function (e) {
         refreshPageArrows();
 
+        // return 
         if(mainSwiper.slides.length > 0) {
-            mainSlideName.innerText = `${mainSwiper.slides[mainSwiper.activeIndex].getAttribute('aria-title')}`;
-            mainSlideStepper.innerText = `${mainSwiper.slides[mainSwiper.activeIndex].getAttribute('aria-label')} -`;
-            // mainSlideName.innerText = mainSwiper.slides[mainSwiper.activeIndex]
+
+            // update le lien actuel
+            Array.from(links).forEach(link=>{
+                link.classList.toggle('active', link.dataset.to===mainSwiper.slides[mainSwiper.activeIndex].dataset.hash);
+            })
+            // mainSlideName.innerText = `${mainSwiper.slides[mainSwiper.activeIndex].getAttribute('aria-title')}`;
+            // mainSlideStepper.innerText = `${mainSwiper.slides[mainSwiper.activeIndex].getAttribute('aria-label')} -`;
             refreshAnimations(mainSwiper.slides[mainSwiper.activeIndex]);
             if(
                 mainSwiper.slides[mainSwiper.activeIndex].contains(sectionSwiper.el)
             ){
                 if(sectionSwiper.isBeginning) {
-                    try{sectionSwiper.slideNext();}catch(e){}
+                    // try{sectionSwiper.slideNext();}catch(e){}
                 } 
                 if(sectionSwiper.isEnd) {
                     try{sectionSwiper.slidePrev();}catch(e){}
@@ -181,8 +187,11 @@ window.addEventListener('DOMContentLoaded', function() {
                 mainSwiper.mousewheel.enable();
             }
         } else {
-            mainSlideName.innerText = `${document.querySelector('.swiper-slide[aria-title]').getAttribute('aria-title')}`;
-            mainSlideStepper.innerText = ``;
+            Array.from(links).forEach(link=>{
+                link.classList.remove('active');
+            })
+            // mainSlideName.innerText = `${document.querySelector('.swiper-slide[aria-title]').getAttribute('aria-title')}`;
+            // mainSlideStepper.innerText = ``;
         }
     };
 
@@ -192,19 +201,22 @@ window.addEventListener('DOMContentLoaded', function() {
     
     refreshPageArrows();
 
-    function slideToHash(to) {
-        if(to==="") return;    
-        mainSwiper.slideTo(sections.indexOf(document.querySelector(`section[data-hash="${to}"]`)), 0);
+    function slideToHash(to, instant=true) {
+        if(to==="") return; 
+
+        mainSwiper.slideTo(sections.indexOf(document.querySelector(`section[data-hash="${to}"]`)), instant?0:800);
     }
 
     slideToHash(window.location.hash.replace('#',''));
 
     mainSwiper.on('sliderMove', function () {
         mainSwiper.el.classList.add('grabbing');
+        superCursor.setHidden(true);
     });
 
     mainSwiper.on('touchEnd', function () {
         mainSwiper.el.classList.remove('grabbing');
+        superCursor.setHidden(false);
     });
 
     pageArrows.left.addEventListener('click', function() {
@@ -240,9 +252,9 @@ window.addEventListener('DOMContentLoaded', function() {
         document.getElementById('menu-toggle').src= `/assets/${closed?'close':'menu'}.svg`;
     }
 
-    document.getElementById('links').querySelectorAll('a').forEach(link=>link.addEventListener('click', function() {
+    links.forEach(link=>link.addEventListener('click', function() {
         setMenu(false)
-        slideToHash(link.dataset.to)
+        slideToHash(link.dataset.to, false)
     }));
 
 

@@ -1,5 +1,6 @@
 title: "Développeur web fullstack à Bordeaux"
-email: your-email@example.com
+email: contact@arthaudproust.fr
+phone: "07 83 39 28 88"
 description: >- # this means to ignore newlines until "baseurl:"
   "Passionné, curieux et créatif, je conçois des solutions digitales, maquette et développe des sites - Arthaud Proust"
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -10,11 +11,11 @@ seo:
   title: "Développeur web fullstack à Bordeaux"
   desc: "Passionné, curieux et créatif, je conçois des solutions digitales, maquette et développe des sites - Arthaud Proust"
   links: 
-    - https://github.com/arthaud-proust
-    - https://www.linkedin.com/in/arthaud-proust/
-    - https://twitter.com/arthaud_proust
-    - https://www.facebook.com/arthaudproust.fr
-    - https://www.instagram.com/arthauproust/
+    github: https://github.com/arthaud-proust
+    linkedin: https://www.linkedin.com/in/arthaud-proust/
+    twitter: https://twitter.com/arthaud_proust
+    facebook: https://www.facebook.com/arthaudproust.fr
+    instagram: https://www.instagram.com/arthauproust/
 
 exclude:
   # - .sass-cache/
@@ -32,10 +33,17 @@ exclude:
   - webpack.mix.js
   - workspace.code-workspace
 
+imgFolder:
+  realisations: /assets/realisations/
+  galleries: /assets/galleries/
+
+
 collections:
   realisations:
     output: true
     permalink: /:collection/:name/
-
+  galleries:
+    output: true
+    permalink: /:collection/:name/
 sass:
-  style: compact # possible values: nested expanded compact compressed
+  style: compressed # possible values: nested expanded compact compressed
