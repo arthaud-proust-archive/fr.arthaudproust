@@ -76,19 +76,20 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/styles.css?v=202202021255">
+        <link rel="stylesheet" href="/css/styles.css?v=202202021851">
 
         <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
 
         <script src="/js/swiper-bundle.min.js"></script>
-        <script src="/js/app.js?v=202202021255"></script>
-        <script src="/js/supercursor.js?v=202202021255"></script>
+        <script src="/js/utils.js?v=202202021851"></script>
+        <script src="/js/app.js?v=202202021851"></script>
+        <script src="/js/supercursor.js?v=202202021851"></script>
         <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
     </head>
     <body data-menu-open="false">
         <div id="superCursor" class="hide">
-    <div id="superCursor-outter"></div>
-    <div id="superCursor-pointer"></div>
+    <div id="superCursor-outter" class="hide"></div>
+    <div id="superCursor-pointer" class="hide"></div>
 </div>
 
         <div class="corner" id="corner-a"></div>
@@ -134,7 +135,7 @@
             <!-- <h3 class="pb">
                 Réalisations
             </h3> -->
-            <h2 class="title">Développeur <em class="toAnimate">créatif</em></h2>
+            <h2 class="title"> <em class="toAnimate">Arthaud</em> Proust</h2>
             
         </div>
         <div class="section-swiper">
@@ -147,13 +148,16 @@
                 <li class="swiper-slide hidden-xl">
                     <div class="intro-card">
                         <h2 class="title">Développeur <em class="toAnimate">créatif</em></h2>
+                        <h3>Mes réalisations</h3>
+                        <img on-click-section-next alt="Flèche bas" class="hoverable nod xlarge noTurn" src="/assets/svg/arrow-down.svg">
+
                     </div>
                 </li>
-                <li class="swiper-slide">
+                <li class="swiper-slide hidden-sm">
                     <ul class="card" style="padding: 0;">
                         <li>
 
-                            <img class="my-auto hoverable nod xlarge noTurn" src="/assets/svg/arrow-down.svg">
+                            <img on-click-section-next alt="Flèche bas" class="my-auto hoverable nod xlarge noTurn" src="/assets/svg/arrow-down.svg">
                             <div>
                                 <h3>Réalisations</h3>
                                 <span>Scroller ou Cliquer et glisser</span>
@@ -213,12 +217,14 @@
                                 <h3>À propos de moi </h3>
                                 Cliquer et glisser
                             </div> 
-                            <div class="pl-2 r-270"><img class="nod hoverable m-auto xlarge noTurn noActive" src="/assets/svg/arrow-down.svg"></div>
+                            <div class="pl-2 r-270"><img alt="Flèche droite" on-click-main-next class="nod hoverable m-auto xlarge noTurn noActive" src="/assets/svg/arrow-down.svg"></div>
                         </li>
-                        <!-- <li><div data-swiper-parallax-x="-50" class="swipe-indication pt pb-3">
-    <p class="italic">Cliquez et glissez pour naviguer</p>
-    <div class="swipe-animation "></div>
-</div></li> -->
+                        <!-- <li>
+                            <div>
+                                Remonter
+                            </div> 
+                            <div class="pl-2 r-180"><img alt="Flèche haut" on-click-section-n="0" class="nod hoverable m-auto xlarge noTurn noActive" src="/assets/svg/arrow-down.svg"></div>
+                        </li> -->
                     </ul>
                 </li>
 
@@ -226,43 +232,56 @@
 
             </ul>
         </div>
+        <div class="hidden-sm">
+            <h2>Développeur web passionné et créatif,</h2>
+            <p data-swiper-parallax-x="-600">
+                Je conçois, design et modélise des solutions digitales.
+            </p>   
+            <p data-swiper-parallax-x="-250"  class="pt pb-3">
+                Je compose également avec le monde physique, photographiant les gens et sculptant le bois.
+            </p>   
+        </div>
         <!-- <h2 class="hoverShowHidden">(frissons garantis) <span class="hidden">si si je vous assure</span></h2> -->
     </div>  
 </section>
         <section class="swiper-slide" id="intro" data-hash="a-propos" aria-title="À propos">
     <div class="sub">
         <div>
-            <h2>À propos</h2>
+            <h1 class="title" data-swiper-parallax-x="-400"><em class="toAnimate">À propos</em></h1>
+            <!-- <h2>À propos</h2> -->
             <!-- <span class="italic">Qui suis-je?</span> -->
         </div>
         
         <div class="section-swiper-1">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    
                     <img class="rounded xlarge" src="/assets/img/me-2/me-x256.jpg" alt="Photo de arthaud de profil"/>
-                    <h1 class="title" data-swiper-parallax-x="-400"><em class="toAnimate">Arthaud</em> Proust</h1>
+                    <!-- <h1 class="title" data-swiper-parallax-x="-400"><em class="toAnimate">Arthaud</em> Proust</h1> -->
                     <p data-swiper-parallax-x="-600" class="pt">
-                        <b>Développeur web passionné et créatif</b>, je conçois des solutions digitales, design et développe des sites.
+                        J'ai commencé à développer des sites à 14 ans, tout d'abord pour explorer le domaine du web, puis pour apporter des solutions à des problématiques précises ou pour <b>entreprendre des projets</b>. 
                     </p>   
-                    <p data-swiper-parallax-x="-250"  class="pt pb-3">
+                    <p data-swiper-parallax-x="-450"  class="pt">
+                        Aujourd'hui je suis <b>développeur freelance</b> depuis septembre 2021, à coté de mes études au <b>MMI Bordeaux</b>. 
                         <!-- Ouvert aux commandes, je propose <a class="underline" href="#">différents services</a>  -->
-                        J'ai commencé à développer des sites dès 14 ans, tout d'abord pour explorer le domaine du web, puis pour apporter des solutions ou créer des projets. 
                     </p>
-                    <div data-swiper-parallax-x="-50" class="swipe-indication pt pb-3">
+                    <p data-swiper-parallax-x="-250"  class="pt">
+                        Je vise une alternance pour mes deuxième et troisième années de BUT, puis à rejoindre une école comme 42, ou l'ENSC.
+                    </p>    
+                    <!-- <div data-swiper-parallax-x="-50" class="swipe-indication pt pb-3">
     <p class="italic">Cliquez et glissez pour naviguer</p>
     <div class="swipe-animation "></div>
-</div>
+</div> -->
                 </div>
             </div>
         </div>
+
         <!-- <div class="swipe-indication hidden">
             <p>Cliquer et glisser pour naviguer</p>
             <div class="swipe-animation"></div>
         </div> -->
-        <!-- <img id="info-swipe-bottom" class="rounded spin" src="assets/glisser.svg" alt="Photo de arthaud de profil"/> -->
     </div>
 </section>
+
         
 <section class="swiper-slide" data-hash="competences" aria-title="Compétences">
     <div class="background" data-swiper-parallax-x="-1500" data-swiper-parallax-duration="600"></div>
@@ -296,6 +315,7 @@
                     C'est une passion que je nourris à coté des études. Je sculpte divers objets, comme des prises d'escalade ou des repose-téléphone.
                 </p>
             </li>
+            <li><div on-click-main-next class="hoverable underline">Voir les compétences techniques</div></li>
         </ul>
     </div>
 </section>
@@ -322,7 +342,10 @@
             <!-- <h2 class="title">Et si on <em>travaillait</em> ensemble?</h2> -->
             <h2 class="title">Rencontrons nous autour <em class="toAnimate">d'un café</em></h2>
         </div>
-        <h2>Un projet, une idée, envie de discuter?</h2>
+        <div>
+            <h2>Un projet, une idée, envie de discuter?</h2>
+            Certains l'ont fait, <a class="underline">voici ce qu'ils en pensent !</a>
+        </div>
         <div class="hidden-sm"></div>
         
         <ul>

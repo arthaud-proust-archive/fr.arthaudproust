@@ -2,6 +2,11 @@
     cursor: none !important;
 }
 
+#superCursor.hide {
+    opacity: 0;
+}
+
+
 #superCursor-outter, 
 #superCursor-pointer {
     --translateX: -50%;

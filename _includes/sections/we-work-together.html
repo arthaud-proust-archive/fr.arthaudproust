@@ -3,7 +3,23 @@
         <div>
             <h2 class="title">Nous travaillons <em class="toAnimate">ensemble</em></h2>
         </div>
-        <ul>
+        <div class="section-swiper">
+            <ul class="swiper-wrapper">
+                {% for testimony in site.data.testimonies %}
+                    <li class="swiper-slide">
+                        {% 
+                            include components/testimony.html 
+                            title=testimony.title
+                            subtitle=testimony.subtitle
+                            img=testimony.img
+                            content=testimony.content
+                            more=testimony.more
+                        %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>  
+        <!-- <ul>
             {% for testimony in site.data.testimonies %}
             <li data-swiper-parallax-x="-100">
                 {% 
@@ -15,6 +31,6 @@
                 %}
             </li>
             {% endfor %}
-        </ul>
+        </ul> -->
     </div>
 </section>

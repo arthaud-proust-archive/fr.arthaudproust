@@ -5,13 +5,6 @@ class CursorEl {
 		this.coef= coef;
 		this.position= position;
 		this.state="Normal";
-		console.log(el);
-		// this.props= {
-		// 	hover: hoverElCoords=>({
-		// 		h: '7rem',
-		// 		w: '7rem'
-		// 	})
-		// }
 	}
 
 	updateElNormal() {
@@ -24,18 +17,11 @@ class CursorEl {
 	}
 
 	updateElHover() {
+		this.el.style.left = this.position.x + "px";
+		this.el.style.top = this.position.y + "px";
+	}
 
-		let hvrElCoords = this.elHovered.getBoundingClientRect();
-		// this.cursor = {
-		// 	x: hvrElCoords.left + hvrElCoords.width/2,
-		// 	y: hvrElCoords.top + hvrElCoords.height/2,
-		// }
-
-		// this.el.style.setProperty("--w", hvrElCoords.width+"px");
-		// this.el.style.setProperty("--h", hvrElCoords.height+"px");
-		// this.el.style.width = ;
-		// this.el.style.height = ;
-		// console.log(hvrElCoords);
+	updateElHidden() {
 		this.el.style.left = this.position.x + "px";
 		this.el.style.top = this.position.y + "px";
 	}
@@ -74,7 +60,7 @@ class CursorEl {
 
 
 
-	// setters 
+	// setters 	
 	setState(state) {
 		this.state = state;
 	}
@@ -102,8 +88,6 @@ class CursorEl {
 
 class SuperCursor {
 	constructor() {
-		if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector;
-
 		this.props = {
 			normal: {
 				h: '3rem',
@@ -112,7 +96,9 @@ class SuperCursor {
 
 		}
 
-		this.state="Normal";
+		this.el = document.getElementById('superCursor');
+
+		this.state="Disabled";
 		this.stateOn = {
 			hover: [
 				// 'a', 
@@ -197,14 +183,14 @@ class SuperCursor {
 
 		
 
-		document.body.classList.add('noCursor');
-		this.animate();
+		
 
 
 		document.addEventListener("mouseleave", ()=>this.setHidden(true));
 		document.addEventListener("mouseenter", ()=>this.setHidden(false));
 	
 		document.addEventListener("mousemove", (event)=>{
+			if(this.state=="Disabled") return;
 			this.mouse = {
 				x: event.pageX,
 				y: event.pageY
@@ -253,7 +239,20 @@ class SuperCursor {
 		});
 	}
 
+	enable() {
+		this.el.classList.remove('hide');
+		this.setState("Normal");
+		document.body.classList.add('noCursor');
+		this.animate();
+	}
+	disable() {
+		this.el.classList.remove('hide');
+		this.setState("Disabled");
+		document.body.classList.remove('noCursor');
+	}
+
 	animate() {
+		if(this.state=="Disabled") return;
 
 		this.outter.updatePositionFromMouse(this.mouse);
 		this.pointer.updatePositionFromMouse(this.mouse);
@@ -306,4 +305,7 @@ class SuperCursor {
 }
 window.addEventListener('DOMContentLoaded', function() {
 	window.superCursor = new SuperCursor();
+	if(!mobileAndTabletCheck()) {
+		superCursor.enable();
+	}
 });

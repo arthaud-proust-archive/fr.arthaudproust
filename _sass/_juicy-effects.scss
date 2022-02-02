@@ -52,7 +52,8 @@
     &::after {
         transition: .2s;
         position: absolute;
-        top: 100%;
+        // top: 100%;
+        bottom: 0;
         left: 0;
         content:' ';
         width: 100%;
@@ -257,6 +258,11 @@ img {
 
     &:not(.noTurn):hover {
         animation: spin 2s;
+        animation-timing-function: cubic-bezier(.3,.22,.32,1.02);
+    }
+
+    &.turnVertical:hover {
+        animation: spinVertical 2s;
         animation-timing-function: cubic-bezier(.3,.22,.32,1.02);
     }
 
