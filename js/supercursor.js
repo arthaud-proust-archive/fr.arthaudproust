@@ -110,6 +110,7 @@ class SuperCursor {
 				'.hoverable-alt'
 			],
 			hide: [
+				'.hideCursor',
 				'.pageArrow',
 			],
 		}

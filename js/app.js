@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', function() {
             direction: 'vertical',
             grabCursor: true,
             loop: false,
-            freeMode: false,
+            freeMode: true,
             // autoHeight: true,
             // resistance: false,
             mousewheel: {
