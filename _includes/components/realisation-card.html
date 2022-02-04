@@ -1,5 +1,11 @@
-<a class="realisation-card with-bg hoverable-alt" data-img="/assets/realisations/test.png" href="{{ include.link }}">
-    <h2>{{ include.title }}</h2>
-    <p>{{ include.desc }}</p>
-    <img src="{{ site.imgFolder.realisations | append: include.folder | append: include.img | append: '.jpg' }}" alt="Image représentant {{ include.title }}"/>
+<a 
+    itemscope itemtype="https://www.schema.org/CreativeWork"
+    class="realisation-card with-bg hoverable-alt" 
+    data-img="/assets/realisations/test.png" 
+    href="{{ include.link }}"
+>
+    <meta itemprop="url" content="{{ include.link }}">
+    <h2 itemprop="name">{{ include.title }}</h2>
+    <p itemprop="about">{{ include.desc }}</p>
+    <img itemprop="thumbnailUrl" src="{{ site.imgFolder.realisations | append: include.folder | append: include.img | append: '.jpg' }}" alt="Image représentant {{ include.title }}"/>
 </a>

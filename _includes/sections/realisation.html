@@ -1,4 +1,11 @@
-<section class="swiper-slide" data-hash="realisations" aria-title="{{ include.page.title }}">
+<section 
+    class="swiper-slide" data-hash="realisations" aria-title="{{ include.page.title }}"
+    itemscope itemtype="https://www.schema.org/CreativeWork"
+
+>
+    <meta itemprop="url" content="{{ include.link }}">
+
+
     <div class="sub noMixBlend overflow-hidden">
         
         <div class="img-wrapper" id="section-image-cover-container">
@@ -13,7 +20,7 @@
             <ul class="swiper-wrapper">
                 <li class="swiper-slide hidden-xl">
                     <div class="intro-card">
-                        <h2 class="title">{{ include.page.title }}</h2>
+                        <h2 itemprop="name" class="title">{{ include.page.title }}</h2>
                         {% if include.page.subtitle %}
                         <h3>{{ include.page.subtitle }}</h3>
                         {% endif %}
@@ -24,7 +31,7 @@
                     <div class="intro-card">
                         <h2>Réalisation</h2>
                         
-                        <p>{{ include.page.desc }}</p>
+                        <p itemprop="about">{{ include.page.desc }}</p>
 
                         {% if include.page.technos %}
                         <br/>
