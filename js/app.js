@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		superCursor.prepare();
 
         if(!botCheck() && !sessionStorage.getItem(SESSION_KEY_ANIM)) {
-            // sessionStorage.setItem(SESSION_KEY_ANIM, true);
+            sessionStorage.setItem(SESSION_KEY_ANIM, true);
             document.body.classList.add('contentHidden');
             setTimeout(function(){
                 superCursor.enable();

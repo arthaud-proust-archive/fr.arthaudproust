@@ -26,7 +26,7 @@ body.contentHidden {
         }
 
         #pageTransition-logo {
-            --s: 240px;
+            --s: 200px;
             position: relative;
             z-index: 100000;
             top: 50%;
@@ -124,14 +124,16 @@ body.contentHidden {
                 left: 18.525%;
                 top: 18.304166666666667%;
                 
-                clip-path: polygon(70% 0%, 100% 0%, 30% 100%, 0% 100%);
+                clip-path: polygon(0% 100%, 30% 100%, 30% 100%, 0% 100%);
+                // clip-path: polygon(70% 0%, 100% 0%, 30% 100%, 0% 100%);
                 background: #000001;
                 // transform: scale(0);
                 // animation: logoPop 0.2s forwards;  
 
-                transform: scaleY(0);
+                // transform: scaleY(0);
                 transform-origin: bottom;
-                animation: logoScaleHeight 0.5s 0s forwards; 
+                animation: buildLogoV8 0.5s 0s forwards;
+                // animation: logoScaleHeight 0.5s 0s forwards; 
             }
         }
     }
@@ -147,6 +149,14 @@ body.contentHidden {
     }
 }
 
+@keyframes buildLogoV8 {
+    from {
+        clip-path: polygon(0% 100%, 30% 100%, 30% 100%, 0% 100%);
+    } 
+    to {
+        clip-path: polygon(70% 0%, 100% 0%, 30% 100%, 0% 100%);
+    }
+}
 
 
 @keyframes logoPop {

@@ -138,6 +138,10 @@ section {
         transform: scale(0.8) rotate(-5deg);
     }
 }
+.grabbing .title {
+    transform: scale(0.8) rotate(-5deg);
+}
+
 em, .link {
     position: relative;
     font-style: normal;
