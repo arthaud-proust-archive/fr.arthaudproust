@@ -77,6 +77,11 @@ class CursorEl {
 		this.el.classList.toggle('hover-alt', isHover);
 	}
 
+
+	setActive(isActive) {
+		this.el.classList.toggle('active', isActive);
+	}
+
 	setHoveringElement(element) {
 		// this.setState('Hover')
 		this.elHovered = element;
@@ -190,54 +195,19 @@ class SuperCursor {
 		document.addEventListener("mouseleave", ()=>this.setHidden(true));
 		document.addEventListener("mouseenter", ()=>this.setHidden(false));
 	
-		document.addEventListener("mousemove", (event)=>{
-			if(this.state=="Disabled") return;
-			this.mouse = {
-				x: event.pageX,
-				y: event.pageY
-			}
+		document.addEventListener("mousemove", (event)=>this.updateMouseFromEvent(event));
+	}
 
-			const elHovered = document.elementFromPoint(this.mouse.x, this.mouse.y);
-			var realElHovered = elHovered;
+	updateMouseFromEvent(event) {
+		if(this.state=="Disabled") return;
+		this.mouse = {
+			x: event.pageX,
+			y: event.pageY
+		}
+	}
 
-			let shouldHide = false;
-			for(let hideSelector of this.stateOn.hide) {
-				shouldHide = elHovered.matches(hideSelector) || elHovered.closest(hideSelector);
-				if(shouldHide!==false && shouldHide !==null) {
-					break;
-				}
-			}
-			this.setHidden(shouldHide);
-	
-			let shouldHover = false;
-			for(let hoverSelector of this.stateOn.hover) {
-				shouldHover = elHovered.matches(hoverSelector) || elHovered.closest(hoverSelector);
-				if(shouldHover!==false && shouldHover !==null) {
-					if(shouldHover !==true) {
-						realElHovered = shouldHover;
-					} 
-					this.hoverElement(realElHovered);
-					break;
-				} else {
-					this.setState('Normal');
-				}
-			}
-
-
-			if(this.state!=="hover") {
-				let shouldHoverAlt = false;
-				for(let hoverAltSelector of this.stateOn.hoverAlt) {
-					shouldHoverAlt = elHovered.matches(hoverAltSelector) || elHovered.closest(hoverAltSelector);
-					if(shouldHoverAlt!==false && shouldHoverAlt !==null) {
-						break;
-					} 
-				}
-				this.setHoverAlt(shouldHoverAlt);
-			}
-
-			// this.setHover(shouldHover);
-			this.setHover(false);
-		});
+	prepare() {
+		document.body.classList.add('noCursor');
 	}
 
 	enable() {
@@ -254,6 +224,47 @@ class SuperCursor {
 
 	animate() {
 		if(this.state=="Disabled") return;
+
+		const elHovered = document.elementFromPoint(this.mouse.x, this.mouse.y);
+		var realElHovered = elHovered;
+
+		let shouldHide = false;
+		for(let hideSelector of this.stateOn.hide) {
+			shouldHide = elHovered.matches(hideSelector) || elHovered.closest(hideSelector);
+			if(shouldHide!==false && shouldHide !==null) {
+				break;
+			}
+		}
+		this.setHidden(shouldHide);
+
+		let shouldHover = false;
+		for(let hoverSelector of this.stateOn.hover) {
+			shouldHover = elHovered.matches(hoverSelector) || elHovered.closest(hoverSelector);
+			if(shouldHover!==false && shouldHover !==null) {
+				if(shouldHover !==true) {
+					realElHovered = shouldHover;
+				} 
+				this.hoverElement(realElHovered);
+				break;
+			} else {
+				this.setState('Normal');
+			}
+		}
+
+
+		if(this.state!=="hover") {
+			let shouldHoverAlt = false;
+			for(let hoverAltSelector of this.stateOn.hoverAlt) {
+				shouldHoverAlt = elHovered.matches(hoverAltSelector) || elHovered.closest(hoverAltSelector);
+				if(shouldHoverAlt!==false && shouldHoverAlt !==null) {
+					break;
+				} 
+			}
+			this.setHoverAlt(shouldHoverAlt);
+		}
+
+		// this.setHover(shouldHover);
+		this.setHover(false);
 
 		this.outter.updatePositionFromMouse(this.mouse);
 		this.pointer.updatePositionFromMouse(this.mouse);
@@ -303,10 +314,9 @@ class SuperCursor {
 		this.pointer.setHoverAlt(isHover);
 	}
 
-}
-window.addEventListener('DOMContentLoaded', function() {
-	window.superCursor = new SuperCursor();
-	if(!mobileAndTabletCheck()) {
-		superCursor.enable();
+	setActive(isActive) {
+		this.outter.setActive(isActive);
+		this.pointer.setActive(isActive);
 	}
-});
+
+}

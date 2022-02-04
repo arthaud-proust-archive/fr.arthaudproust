@@ -40,7 +40,8 @@ body {
     display: grid;
     height: 100vh;
     overflow: hidden;
-    background: #fafafa;
+    background-color: #fafafa;
+    // background: #000001;
     gap: 1px;
     grid-template: "a top b" var(--col-h)
                 "left main right" 1fr

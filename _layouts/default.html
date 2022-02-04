@@ -17,11 +17,11 @@
 
         <script src="/js/swiper-bundle.min.js"></script>
         <script src="/js/utils.js?v={{ "now" | date: "%Y%m%d%H%M" }}"></script>
-        <script src="/js/app.js?v={{ "now" | date: "%Y%m%d%H%M" }}"></script>
         <script src="/js/supercursor.js?v={{ "now" | date: "%Y%m%d%H%M" }}"></script>
+        <script src="/js/app.js?v={{ "now" | date: "%Y%m%d%H%M" }}"></script>
         <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
     </head>
-    <body data-menu-open="false">
+    <body data-menu-open="false" class="">
         {% include components/superCursor.html %}
 
         <div class="corner" id="corner-a"></div>
@@ -40,5 +40,6 @@
         {{ content }}
 
         {% include footer.html %}
+        {% include components/pageTransition.html %}
     </body>
 </html>

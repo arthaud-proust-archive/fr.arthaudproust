@@ -1,4 +1,21 @@
 window.addEventListener('DOMContentLoaded', function() {
+    const SESSION_KEY_ANIM = 'arthaudproust-animation';
+    window.superCursor = new SuperCursor();
+	if(!mobileAndTabletCheck()) {
+		superCursor.prepare();
+
+        if(!botCheck() && !sessionStorage.getItem(SESSION_KEY_ANIM)) {
+            // sessionStorage.setItem(SESSION_KEY_ANIM, true);
+            document.body.classList.add('contentHidden');
+            setTimeout(function(){
+                superCursor.enable();
+            }, 3500);
+        } else {
+            superCursor.enable();
+        }
+    }
+
+
     const MAIN_SPEED = 1500;
     const MAIN_LINK_SPEED = 800;
     const SECTION_SPEED = 1000;
@@ -172,14 +189,16 @@ window.addEventListener('DOMContentLoaded', function() {
 
     slideToHash(window.location.hash.replace('#',''));
 
-    mainSwiper.on('sliderMove', function () {
+    mainSwiper.on('sliderMove', function (swiper, event) {
         mainSwiper.el.classList.add('grabbing');
-        superCursor.setHidden(true);
+        superCursor.updateMouseFromEvent(event);
+        superCursor.setActive(true);
     });
 
     mainSwiper.on('touchEnd', function () {
         mainSwiper.el.classList.remove('grabbing');
-        superCursor.setHidden(false);
+        superCursor.setActive(false);
+        // superCursor.setHidden(false);
     });
 
     pageArrows.left.addEventListener('click', function() {

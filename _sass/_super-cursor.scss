@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
 
-    z-index: 1000;
+    z-index: 500;
     position: absolute;
     height: var(--h);
     width: var(--w);
@@ -74,6 +74,14 @@
     // border-radius: 100%;
 }
 
+#superCursor-outter.active {
+    --w: 5rem;
+    --h: 5rem;  
+    border-radius: 100%;
+    // opacity: 0;
+}
+
+
 
 
 
@@ -114,4 +122,11 @@
     --w: 10rem;
     border-radius: 0;
     // background: none;
+}
+
+#superCursor-pointer.active {
+    --w: 4rem;
+    --h: 4rem;  
+    // border-radius: 0;
+    // --rotateZ: 45deg;
 }
