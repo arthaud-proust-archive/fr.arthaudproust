@@ -69,6 +69,7 @@ body[data-menu-open="true"] {
         --col-h: 4rem;
         --section-w: calc(100vw - 1px);
         --font-h1: 3.5rem;
+        background: #000001 !important;
         grid-template: "top" var(--col-h)
                     "main" 1fr
                     /* "bottom" var(--col-h) */

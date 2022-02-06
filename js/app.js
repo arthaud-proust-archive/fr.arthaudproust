@@ -254,19 +254,12 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    function toggleMenu() {
-        const open = document.body.dataset.menuOpen==="true";
-        setMenu(!open);
-    }
-
-    function setMenu(closed) {
-        document.body.dataset.menuOpen = closed;
-        document.getElementById('menu-toggle').src= `/assets/${closed?'close':'menu'}.svg`;
-    }
+    
 
     links.forEach(link=>link.addEventListener('click', function() {
         setMenu(false)
         slideToHash(link.dataset.to, false)
+        sectionSwiper.slideTo(0);
     }));
 
 
@@ -285,6 +278,7 @@ window.addEventListener('DOMContentLoaded', function() {
             })
 
             el.dataset.open = keepClosed?"false":"true";
+
         })
     })
 
