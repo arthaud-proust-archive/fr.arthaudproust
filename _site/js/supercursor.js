@@ -73,10 +73,16 @@ class CursorEl {
 		this.el.classList.toggle('hover', isHover);
 	}
 
-	setHoverAlt(isHover) {
+	setHoverAlt(isHover, realElHovered=false) {
+		if(realElHovered && realElHovered.dataset.hoverAltContent) {
+			this.el.style.setProperty('--hoverAltContent', `"${realElHovered.dataset.hoverAltContent}"`);
+		}
 		this.el.classList.toggle('hover-alt', isHover);
 	}
 
+	setAlt(isAlt) {
+		this.el.classList.toggle('alt', isAlt);
+	}
 
 	setActive(isActive) {
 		this.el.classList.toggle('active', isActive);
@@ -104,6 +110,9 @@ class SuperCursor {
 		this.el = document.getElementById('superCursor');
 
 		this.state="Disabled";
+
+		this.isAlt = false;
+
 		this.stateOn = {
 			hover: [
 				// 'a', 
@@ -260,7 +269,7 @@ class SuperCursor {
 					break;
 				} 
 			}
-			this.setHoverAlt(shouldHoverAlt);
+			this.setHoverAlt(shouldHoverAlt, realElHovered);
 		}
 
 		// this.setHover(shouldHover);
@@ -309,9 +318,15 @@ class SuperCursor {
 		this.pointer.setHover(isHover);
 	}
 
-	setHoverAlt(isHover) {
-		this.outter.setHoverAlt(isHover);
+	setHoverAlt(isHover, realElHovered) {
+		this.outter.setHoverAlt(isHover, realElHovered);
 		this.pointer.setHoverAlt(isHover);
+	}
+
+	setAlt(isAlt) {
+		this.isAlt = isAlt;
+		this.outter.setAlt(isAlt);
+		this.pointer.setAlt(isAlt);
 	}
 
 	setActive(isActive) {

@@ -263,7 +263,11 @@ window.addEventListener('DOMContentLoaded', function() {
     }));
 
 
-
+    document.body.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        superCursor.setAlt(!superCursor.isAlt);
+        return
+    })
 
     document.getElementById('menu-toggle').addEventListener('click', toggleMenu)
 

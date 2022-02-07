@@ -8,13 +8,13 @@
 
     <div class="sub noMixBlend overflow-hidden">
         
-        <div class="img-wrapper" id="section-image-cover-container">
-            <img class="hidden-smd full" id="sic-preview" src="{{ site.imgFolder.realisations | append: include.page.folder | append: include.page.img | append: '.jpg' }}">
+        <a href="{{ include.page.link }}" class="img-wrapper" id="section-image-cover-container">
+            <img class="hidden-smd full hoverable-alt" id="sic-preview" src="{{ site.imgFolder.realisations | append: include.page.folder | append: include.page.img | append: '.jpg' }}">
             <!-- <img class="hidden-smd full" id="section-image-cover" src="{{ include.page.img }}"> -->
             {% for img in include.page.imgs %}
-                <img class="hidden-smd full d-none" id="sic-{{img}}" src="{{ site.imgFolder.realisations | append: include.page.folder | append: img | append: '.jpg' }}">
+                <img class="hidden-smd full hoverable-alt d-none" id="sic-{{img}}" src="{{ site.imgFolder.realisations | append: include.page.folder | append: img | append: '.jpg' }}">
             {% endfor %}
-        </div>
+        </a>
 
         <div class="section-swiper">
             <ul class="swiper-wrapper">
