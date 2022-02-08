@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     const mainSwiper = new Swiper('.main-swiper', {
         // Optional parameters
-        direction: 'horizontal',
+        direction: 'vertical',
         loop: false,
         speed: window.mobileAndTabletCheck()?150:1500,
         mousewheel: {
